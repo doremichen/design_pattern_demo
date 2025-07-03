@@ -5,10 +5,12 @@
  */
 package com.adam.app.design.pattern.demo.singleton;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.adam.app.design.pattern.demo.MainActivity;
 import com.adam.app.design.pattern.demo.R;
 import com.adam.app.design.pattern.demo.databinding.ActivityDemoSingletonStartBinding;
 
@@ -44,6 +46,14 @@ public class DemoSingletonStart extends AppCompatActivity {
             mLogBuffer.append(result).append("\n");
             // set text output
             mBinding.txtOutput.setText(mLogBuffer.toString());
+        });
+
+        // set back button listener
+        mBinding.btnBackToMain.setOnClickListener(v -> {
+            // back to main activity
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
         });
 
     }

@@ -94,6 +94,7 @@
     <!-- title string-->
     <string name="title_demo_test">Hello world</string>
     <string name="title_demo_singleton">Demo singleton pattern</string>
+    <string name="title_demo_factory">Demo factory pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -106,4 +107,16 @@
     <string name="singleton_result_init_1">Each time the button is pressed, Singleton.getInstance() is called\n</string>
     <string name="singleton_result_init_2">Let\'s see if the ID changes?\n\n</string>
     <string name="singleton_result_log_1">"Generate a singleton object! "</string>
+    <string name="tv_factory_instruction">Factory Pattern\n\nProvides a way to create objects without specifying the exact class of object that will be created.\n\nIn this demo, we will create different types of characters using a factory.</string>
+    <string name="btn_factory_start">Start Demo</string>
+    <string name="btn_factory_create_character">Create Character</string>
+    <string name="btn_back_to_main_list">Back to Main List</string>
+    <string name="title_activity_demo_factory_main">Demo factory pattern</string>
+    <string name="factory_result_character">"Character: "</string>
+    <string name="factory_result_special_ability">"Special Ability: "</string>
+    <string-array name="character_types">
+        <item>Hero</item>
+        <item>Mage</item>
+        <item>Archer</item>
+    </string-array>
 </resources>
