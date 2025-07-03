@@ -5,5 +5,7 @@
     -->
     <data titleRes="title_demo_singleton" clsname="com.adam.app.design.pattern.demo.singleton.DemoSingletonMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_factory" clsname="com.adam.app.design.pattern.demo.factory.DemoFactoryMain" pkgname="com.adam.app.design.pattern.demo"/>
+    <data titleRes="title_demo_abstract_factory" clsname="com.adam.app.design.pattern.demo.abstract_factory.DemoAbstractFactoryMain" pkgname="com.adam.app.design.pattern.demo"/>
+
 
 </List>

@@ -21,7 +21,7 @@
 
     <Button
         android:id="@+id/btn_start_factory_demo"
-        android:text="@string/btn_factory_start"
+        android:text="@string/btn_start_factory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
