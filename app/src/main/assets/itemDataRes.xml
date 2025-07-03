@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<List>
+    <!--
+    <data titleRes="title_demo_test" clsname="com.adam.app.design.pattern.demo.HelloWorldAct" pkgname="com.adam.app.design.pattern.demo"/>
+    -->
+    <data titleRes="title_demo_singleton" clsname="com.adam.app.design.pattern.demo.singleton.DemoSingletonMain" pkgname="com.adam.app.design.pattern.demo"/>
+</List>
