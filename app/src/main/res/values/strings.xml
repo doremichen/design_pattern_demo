@@ -96,6 +96,7 @@
     <string name="title_demo_singleton">Demo singleton pattern</string>
     <string name="title_demo_factory">Demo factory pattern</string>
     <string name="title_demo_abstract_factory">Demo abstract factory pattern</string>
+    <string name="title_demo_template">Demo template method pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -109,7 +110,7 @@
     <string name="singleton_result_init_2">Let\'s see if the ID changes?\n\n</string>
     <string name="singleton_result_log_1">"Generate a singleton object! "</string>
     <string name="tv_factory_instruction">Factory Pattern\n\nProvides a way to create objects without specifying the exact class of object that will be created.\n\nIn this demo, we will create different types of characters using a factory.</string>
-    <string name="btn_start_factory">Start Demo</string>
+    <string name="btn_start_factory">Start</string>
     <string name="btn_factory_create_character">Create Character</string>
     <string name="btn_back_to_main_list">Back to Main List</string>
     <string name="title_activity_demo_factory_main">Demo factory pattern</string>
@@ -125,6 +126,10 @@
     <string name="toast_error_bit_flip">Bit flip!!!</string>
     <string name="abstract_factory_result_button">"Button: "</string>
     <string name="abstract_factory_result_text">"Text: "</string>
+    <string name="label_template_instruction">Template Method Pattern is a behavioral design pattern that defines the skeleton of an algorithm in a method, deferring some steps to subclasses.\n\nThis pattern allows subclasses to redefine certain steps of an algorithm without changing its overall structure.\n\nIn this demo, we simulate a data export scenario. The user can select different export formats (CSV or JSON). Based on the selection, the system calls the corresponding subclass implementation and uses a template method to execute:\n\n• openFile()\\n\n• writeHeader()\\n\n• writeData()\\n\n• closeFile()\n\nThe order of operations is defined by the template method exportData(), while each format subclass provides its specific implementation for each step.\n\nPress \"Start Demo\" to explore how Template Method Pattern controls the flow of logic with flexible subclass behavior.\n</string>
+    <string name="btn_start_template">Start</string>
+    <string name="title_template_method_pattern">Template Method Pattern</string>
+    <string name="btn_template_run_export">Run Export</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
@@ -134,4 +139,9 @@
         <item>Dark Theme</item>
         <item>Light Theme</item>
     </string-array>
+    <string-array name="exporter_types">
+        <item>CSV</item>
+        <item>JSON</item>
+    </string-array>
+
 </resources>
