@@ -100,6 +100,7 @@
     <string name="title_demo_builder">Demo builder pattern</string>
     <string name="title_demo_proxy">Demo proxy pattern</string>
     <string name="title_demo_prototype">Demo prototype pattern</string>
+    <string name="title_demo_mediator">Demo mediator pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -160,6 +161,20 @@
         "\n"
         "In this demo, you'll see how to clone an existing character template using the `clone()` method and customize it without affecting the original.\n"
     </string>
+    <string name="demo_mediator_hint_type_a_message">Type a message</string>
+    <string name="btn_demo_mediator_send">Send</string>
+    <string name="demo_mediator_hint_enter_your_name">Enter your name</string>
+    <string name="demo_mediator_hint_enter_your_message">Enter your message</string>
+    <string name="demo_mediator_instruction">
+        "This demo demonstrates the Mediator Pattern by simulating a chat room where users send messages through a mediator.\n"
+        "\n"
+        "The ChatRoom (mediator) manages message delivery, so users do not communicate directly with each other. This reduces tight coupling between components.\n" +
+        "\n"
+        "Try selecting a user, typing a message, and sending it. You'll see that other users receive the message through the ChatRoom mediator.\n"
+    </string>
+    <string name="toast_please_enter_your_name_and_message">Please enter your name and message</string>
+    <string name="demo_mediator_receive_message">" receive message: "</string>
+    <string name="demo_mediator_from">" from "</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
