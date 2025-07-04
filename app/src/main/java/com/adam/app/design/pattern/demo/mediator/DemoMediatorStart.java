@@ -31,30 +31,25 @@ public class DemoMediatorStart extends AppCompatActivity {
         // init chat room
         ChatRoom chatRoom = new ChatRoom();
         // init user
-        User adam = new ConcreteUser(chatRoom, "Adam");
-        User bob = new ConcreteUser(chatRoom, "Bob");
-        // add user to chat room
-        chatRoom.addUser(adam);
-        chatRoom.addUser(bob);
+        User[] users = new User[] {
+                new ConcreteUser(chatRoom, "Adam"),
+                new ConcreteUser(chatRoom, "Bob"),
+                new ConcreteUser(chatRoom, "Scott"),
+                new ConcreteUser(chatRoom, "Tom"),
+                new ConcreteUser(chatRoom, "Jack"),
+        };
 
-        // set message callback
-        adam.setMessageCallback((message, sender) -> {
-            mBinding.txtLog.append(adam.getName()
-                    + getString(R.string.demo_mediator_receive_message)
-                    + message
-                    + getString(R.string.demo_mediator_from)
-                    + sender
-                    + "\n");
-        });
-
-        bob.setMessageCallback((message, sender) -> {
-            mBinding.txtLog.append(bob.getName()
-                    + getString(R.string.demo_mediator_receive_message)
-                    + message
-                    + getString(R.string.demo_mediator_from)
-                    + sender
-                    + "\n");
-        });
+        for (User user : users) {
+            chatRoom.addUser(user);
+            user.setMessageCallback((message, sender) -> {
+                mBinding.txtLog.append(user.getName()
+                        + getString(R.string.demo_mediator_receive_message)
+                        + message
+                        + getString(R.string.demo_mediator_from)
+                        + sender
+                        + "\n");
+            });
+        }
 
         // set send message button click listener
         mBinding.btnSend.setOnClickListener(v -> {
@@ -81,5 +76,11 @@ public class DemoMediatorStart extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        // message callback should be null
+        mBinding.edtUserName.setText("");
+        mBinding.edtMessage.setText("");
+        mBinding.txtLog.setText("");
+        mBinding = null;
+
     }
 }
