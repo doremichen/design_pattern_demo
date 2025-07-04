@@ -50,5 +50,8 @@ public class DemoProxyStart extends AppCompatActivity {
         IGamePlayer player = new ProxyPlayer("Adam");
         player.play();
         mBinding.txtResult.setText(Util.logMessage());
+        // clear log
+        Util.clearLog();
+
     }
 }

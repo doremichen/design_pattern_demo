@@ -32,6 +32,8 @@ public class DemoCommandStart extends AppCompatActivity {
             RemoteControl.getInstance().getCommand(isChecked).execute();
             // show result
             mBinding.txtLog.setText(Util.logMessage());
+            // clear log
+            Util.clearLog();
         });
 
         // back button

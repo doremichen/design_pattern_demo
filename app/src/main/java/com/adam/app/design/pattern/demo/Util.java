@@ -36,6 +36,13 @@ public final class Util {
     }
 
     /**
+     * Clear log buffer.
+     */
+    public static void clearLog() {
+        sLogBuffer.setLength(0);
+    }
+
+    /**
      * Log debug message.
      * @param msg Message to log.
      */
