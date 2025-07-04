@@ -99,6 +99,7 @@
     <string name="title_demo_template">Demo template method pattern</string>
     <string name="title_demo_builder">Demo builder pattern</string>
     <string name="title_demo_proxy">Demo proxy pattern</string>
+    <string name="title_demo_prototype">Demo prototype pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -148,6 +149,17 @@
     <string name="btn_demo_proxy_start_demo">Start Demo</string>
     <string name="demo_proxy_result_init_info">Result log will show here...</string>
     <string name="demo_proxy_instruction">Proxy Pattern provides a surrogate or placeholder for another object to control access to it. \nIn this demo, the proxy delays creation of the real video player and logs the access.</string>
+    <string name="btn_demo_prototype_clone_character">Clone Character</string>
+    <string name="demo_prototype_instruction">
+        "Prototype Pattern allows objects to be cloned instead of created from scratch. This is useful when object creation is expensive, or you want to avoid dependencies on concrete classes.\n"
+        "\n"
+        "Key benefits:\n"
+        "- Avoids the overhead of new object creation\n"
+        "- Simplifies object initialization\n"
+        "- Useful for object registries and GUI editors\n"
+        "\n"
+        "In this demo, you'll see how to clone an existing character template using the `clone()` method and customize it without affecting the original.\n"
+    </string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>

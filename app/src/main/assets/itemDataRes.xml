@@ -9,6 +9,8 @@
     <data titleRes="title_demo_template" clsname="com.adam.app.design.pattern.demo.template.DemoTemplateMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_builder" clsname="com.adam.app.design.pattern.demo.builder.DemoBuilderMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_proxy" clsname="com.adam.app.design.pattern.demo.proxy.DemoProxyMain" pkgname="com.adam.app.design.pattern.demo"/>
+    <data titleRes="title_demo_prototype" clsname="com.adam.app.design.pattern.demo.prototype.DemoPrototypeMain" pkgname="com.adam.app.design.pattern.demo"/>
+
 
 
 
