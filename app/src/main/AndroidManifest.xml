@@ -12,7 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DesignPatternDemo"
         tools:targetApi="31">
-
+        <activity
+            android:name=".proxy.DemoProxyStart"
+            android:exported="false" />
+        <activity
+            android:name=".proxy.DemoProxyMain"
+            android:exported="false" />
         <activity
             android:name=".builder.DemoBuilderStart"
             android:exported="false" />

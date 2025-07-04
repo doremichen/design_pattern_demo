@@ -98,6 +98,7 @@
     <string name="title_demo_abstract_factory">Demo abstract factory pattern</string>
     <string name="title_demo_template">Demo template method pattern</string>
     <string name="title_demo_builder">Demo builder pattern</string>
+    <string name="title_demo_proxy">Demo proxy pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -143,6 +144,10 @@
     <string name="cb_demo_builder_add_ram">Add RAM</string>
     <string name="cb_demo_builder_add_storage">Add Storage</string>
     <string name="cb_demo_builder_add_gpu">Add GPU</string>
+    <string name="demo_proxy_description">Please press start demo button to see the result</string>
+    <string name="btn_demo_proxy_start_demo">Start Demo</string>
+    <string name="demo_proxy_result_init_info">Result log will show here...</string>
+    <string name="demo_proxy_instruction">Proxy Pattern provides a surrogate or placeholder for another object to control access to it. \nIn this demo, the proxy delays creation of the real video player and logs the access.</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>

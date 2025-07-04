@@ -16,6 +16,25 @@ public final class Util {
     // TAG: DesignPatternDemo
     private static final String TAG = "DesignPatternDemo";
 
+    // logBuffer: stringBuilder
+    private static final StringBuilder sLogBuffer = new StringBuilder();
+
+    /**
+     * Log message.
+     * @param msg Message to log.
+     */
+    public static void log(String msg) {
+        sLogBuffer.append(msg).append("\n");
+    }
+
+    /**
+     * Log message.
+     * @return Message to log.
+     */
+    public static String logMessage() {
+        return sLogBuffer.toString();
+    }
+
     /**
      * Log debug message.
      * @param msg Message to log.
