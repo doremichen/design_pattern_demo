@@ -5,9 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:padding="24dp"
-    tools:context=".template.DemoTemplateMain">
+    android:fitsSystemWindows="true"
+    tools:context=".BaseInstructionActivity">
+
     <ScrollView
         android:id="@+id/scroll_view_instruction"
         android:layout_width="0dp"
@@ -17,19 +18,19 @@
         app:layout_constraintBottom_toTopOf="@id/btn_start_demo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/txt_template_instruction"
+                android:id="@+id/txt_instruction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/template_description"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:textColor="@android:color/black"
-                android:padding="10dp" />
+                android:lineSpacingExtra="4dp"
+                android:padding="10dp"/>
         </LinearLayout>
     </ScrollView>
 
@@ -37,7 +38,7 @@
         android:id="@+id/btn_start_demo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_start_template"
+        android:text="@string/btn_start_builder"
         app:layout_constraintTop_toBottomOf="@id/scroll_view_instruction"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

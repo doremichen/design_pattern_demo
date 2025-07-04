@@ -7,6 +7,8 @@
     <data titleRes="title_demo_factory" clsname="com.adam.app.design.pattern.demo.factory.DemoFactoryMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_abstract_factory" clsname="com.adam.app.design.pattern.demo.abstract_factory.DemoAbstractFactoryMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_template" clsname="com.adam.app.design.pattern.demo.template.DemoTemplateMain" pkgname="com.adam.app.design.pattern.demo"/>
+    <data titleRes="title_demo_builder" clsname="com.adam.app.design.pattern.demo.builder.DemoBuilderMain" pkgname="com.adam.app.design.pattern.demo"/>
+
 
 
 </List>

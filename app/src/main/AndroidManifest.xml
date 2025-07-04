@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DesignPatternDemo"
         tools:targetApi="31">
+
+        <activity
+            android:name=".builder.DemoBuilderStart"
+            android:exported="false" />
+        <activity
+            android:name=".builder.DemoBuilderMain"
+            android:exported="false" />
         <activity
             android:name=".template.DemoTemplateStart"
             android:exported="false" />

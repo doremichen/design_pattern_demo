@@ -97,19 +97,20 @@
     <string name="title_demo_factory">Demo factory pattern</string>
     <string name="title_demo_abstract_factory">Demo abstract factory pattern</string>
     <string name="title_demo_template">Demo template method pattern</string>
+    <string name="title_demo_builder">Demo builder pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
     <string name="tv_no_data">No item</string>
     <string name="toast_error_occurred_while_parsing_itemdata_xml">Error occurred while parsing itemData.xml</string>
-    <string name="tv_singleton_instruction">Singleton is a design pattern that ensures that only one entity in the world is available. \n\nWe will show its effect shortly.</string>
+    <string name="singleton_description">Singleton is a design pattern that ensures that only one entity in the world is available. \n\nWe will show its effect shortly.</string>
     <string name="btn_start_singleton">Start</string>
     <string name="btn_get_singleton_object">Get Singleton object</string>
     <string name="title_activity_demo_singleton_main">Demo singleton pattern</string>
     <string name="singleton_result_init_1">Each time the button is pressed, Singleton.getInstance() is called\n</string>
     <string name="singleton_result_init_2">Let\'s see if the ID changes?\n\n</string>
     <string name="singleton_result_log_1">"Generate a singleton object! "</string>
-    <string name="tv_factory_instruction">Factory Pattern\n\nProvides a way to create objects without specifying the exact class of object that will be created.\n\nIn this demo, we will create different types of characters using a factory.</string>
+    <string name="factory_description">Factory Pattern\n\nProvides a way to create objects without specifying the exact class of object that will be created.\n\nIn this demo, we will create different types of characters using a factory.</string>
     <string name="btn_start_factory">Start</string>
     <string name="btn_factory_create_character">Create Character</string>
     <string name="btn_back_to_main_list">Back to Main List</string>
@@ -126,10 +127,22 @@
     <string name="toast_error_bit_flip">Bit flip!!!</string>
     <string name="abstract_factory_result_button">"Button: "</string>
     <string name="abstract_factory_result_text">"Text: "</string>
-    <string name="label_template_instruction">Template Method Pattern is a behavioral design pattern that defines the skeleton of an algorithm in a method, deferring some steps to subclasses.\n\nThis pattern allows subclasses to redefine certain steps of an algorithm without changing its overall structure.\n\nIn this demo, we simulate a data export scenario. The user can select different export formats (CSV or JSON). Based on the selection, the system calls the corresponding subclass implementation and uses a template method to execute:\n\n• openFile()\\n\n• writeHeader()\\n\n• writeData()\\n\n• closeFile()\n\nThe order of operations is defined by the template method exportData(), while each format subclass provides its specific implementation for each step.\n\nPress \"Start Demo\" to explore how Template Method Pattern controls the flow of logic with flexible subclass behavior.\n</string>
+    <string name="template_description">Template Method Pattern is a behavioral design pattern that defines the skeleton of an algorithm in a method, deferring some steps to subclasses.\n\nThis pattern allows subclasses to redefine certain steps of an algorithm without changing its overall structure.\n\nIn this demo, we simulate a data export scenario. The user can select different export formats (CSV or JSON). Based on the selection, the system calls the corresponding subclass implementation and uses a template method to execute:\n\n• openFile()\\n\n• writeHeader()\\n\n• writeData()\\n\n• closeFile()\n\nThe order of operations is defined by the template method exportData(), while each format subclass provides its specific implementation for each step.\n\nPress \"Start Demo\" to explore how Template Method Pattern controls the flow of logic with flexible subclass behavior.\n</string>
     <string name="btn_start_template">Start</string>
     <string name="title_template_method_pattern">Template Method Pattern</string>
     <string name="btn_template_run_export">Run Export</string>
+    <string name="builder_description">Builder Pattern: Step-by-step construction of complex objects. Allows different representations using the same construction code.</string>
+    <string name="btn_start_builder">START</string>
+    <string name="btn_builder_create_computer">Create Computer</string>
+    <string name="cp_info_cpu">"CPU: "</string>
+    <string name="cp_info_ram">" RAM: "</string>
+    <string name="cp_info_hdd">" HDD: "</string>
+    <string name="cp_info_gpu">" GPU: "</string>
+    <string name="demo_builder_result_init_info">Result will be shown here.</string>
+    <string name="cb_demo_builder_add_cpu">Add CPU</string>
+    <string name="cb_demo_builder_add_ram">Add RAM</string>
+    <string name="cb_demo_builder_add_storage">Add Storage</string>
+    <string name="cb_demo_builder_add_gpu">Add GPU</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
