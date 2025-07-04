@@ -101,6 +101,7 @@
     <string name="title_demo_proxy">Demo proxy pattern</string>
     <string name="title_demo_prototype">Demo prototype pattern</string>
     <string name="title_demo_mediator">Demo mediator pattern</string>
+    <string name="title_demo_command">Demo command pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -175,6 +176,18 @@
     <string name="toast_please_enter_your_name_and_message">Please enter your name and message</string>
     <string name="demo_mediator_receive_message">" receive message: "</string>
     <string name="demo_mediator_from">" from "</string>
+    <string name="demo_command_instruction">
+        "This demo showcases the Command Pattern using a simple light switch.\n"
+        "The toggle switch represents a command trigger, allowing the user to turn a light ON or OFF.\n"
+        "\n"
+        "- Receiver: Light\n"
+        "- Commands: LightOnCommand, LightOffCommand\n"
+        "- Invoker: RemoteControl\n"
+        "- Client: UI Switch interacts with RemoteControl"
+        "The command encapsulates the action, enabling decoupling between sender and receiver."
+    </string>
+    <string name="demo_command_title_command_pattern_demo">Command Pattern Demo</string>
+    <string name="demo_command_light_switch">Light Switch</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
