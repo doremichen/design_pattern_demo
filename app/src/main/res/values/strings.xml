@@ -104,6 +104,7 @@
     <string name="title_demo_command">Demo command pattern</string>
     <string name="title_demo_chain_of_responsibility">Demo chain of responsibility pattern</string>
     <string name="title_demo_decorator">Demo decorator pattern</string>
+    <string name="title_demo_strategy">Demo strategy pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -225,6 +226,19 @@
     <string name="demo_decorator_chb_add_vanilla">Add Vanilla</string>
     <string name="demo_decorator_btn_make_coffee">Make Coffee</string>
     <string name="demo_decorator_coffee_info_result">Coffee info: %1$s\nTotal cost: $%2$.2f</string>
+    <string name="strategy_description">"Strategy Pattern lets you define a family of algorithms, encapsulate each one and make them interchangeable.\n"
+        "Strategy lets the algorithm vary independently from clients that use it.\n\n"
+        "In this demo, you can choose different discount strategies for a given price:\n"
+        "• No Discount\n"
+        "• Seasonal Discount (10%)\n"
+        "• Clearance Discount (50%)\n\n"
+        "Enter a price, select a strategy, and press \"Calculate\" to see the final price."
+    </string>
+    <string name="demo_strategy_hint_enter_price">Enter price</string>
+    <string name="label_no_discount">No Discount</string>
+    <string name="label_seasonal_discount">Seasonal (10%)</string>
+    <string name="label_clearance_discount">Clearance (50%)</string>
+    <string name="demo_strategy_btn_calculate">Calculate</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
@@ -237,6 +251,11 @@
     <string-array name="exporter_types">
         <item>CSV</item>
         <item>JSON</item>
+    </string-array>
+    <string-array name="strategy_types">
+        <item>@string/label_no_discount</item>
+        <item>@string/label_seasonal_discount</item>
+        <item>@string/label_clearance_discount</item>
     </string-array>
 
 </resources>
