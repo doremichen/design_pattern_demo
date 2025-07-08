@@ -102,6 +102,7 @@
     <string name="title_demo_prototype">Demo prototype pattern</string>
     <string name="title_demo_mediator">Demo mediator pattern</string>
     <string name="title_demo_command">Demo command pattern</string>
+    <string name="title_demo_chain_of_responsibility">Demo chain of responsibility pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -188,6 +189,24 @@
     </string>
     <string name="demo_command_title_command_pattern_demo">Command Pattern Demo</string>
     <string name="demo_command_light_switch">Light Switch</string>
+    <string name="demo_chain_instruction">"This demo illustrates the Chain of Responsibility Pattern.\n\n"
+        "A support request is passed along a chain of handlers:\n"
+        "- LowLevelSupport handles simple issues.\n"
+        "- MidLevelSupport handles intermediate issues.\n"
+        "- HighLevelSupport handles complex or unhandled issues.\n\n"
+        "Each handler decides whether it can process the request or pass it to the next one.\n\n"
+        "Usage:\n"
+        "1. Enter a request (e.g., \"password reset\", \"database issue\", \"network crash\").\n"
+        "2. Click \"Send Request\".\n"
+        "3. The system will display which handler processed your request.\n"
+    </string>
+    <string name="demo_chain_et_hint_enter_your_support_request">Enter your support request</string>
+    <string name="demo_chain_btn_send_request">Send Request</string>
+    <string name="demo_chain_handled_by_low_level_support">Handled by Low-Level Support</string>
+    <string name="demo_chain_request_could_not_be_handled">Request could not be handled</string>
+    <string name="demo_chain_handled_by_mid_level_support">Handled by Mid-Level Support</string>
+    <string name="demo_chain_handled_by_high_level_support">Handled by High-Level Support</string>
+    <string name="demo_chain_unhandled_request">Unhandled request</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
