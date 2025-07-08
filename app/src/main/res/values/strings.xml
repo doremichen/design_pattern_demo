@@ -103,6 +103,7 @@
     <string name="title_demo_mediator">Demo mediator pattern</string>
     <string name="title_demo_command">Demo command pattern</string>
     <string name="title_demo_chain_of_responsibility">Demo chain of responsibility pattern</string>
+    <string name="title_demo_decorator">Demo decorator pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -207,6 +208,23 @@
     <string name="demo_chain_handled_by_mid_level_support">Handled by Mid-Level Support</string>
     <string name="demo_chain_handled_by_high_level_support">Handled by High-Level Support</string>
     <string name="demo_chain_unhandled_request">Unhandled request</string>
+    <string name="demo_decorator_instruction">"This demo illustrates the Decorator Pattern.\n\n"
+        "The Decorator Pattern allows you to dynamically add new behavior to objects without modifying their structure.\n\n"
+        "We start with a basic Coffee object and wrap it with additional decorators like Milk, Sugar, and Vanilla.\n\n"
+        "Usage:\n"
+        "1. Select ingredients to decorate your coffee.\n"
+        "2. Press the \"Make Coffee\" button.\n"
+        "3. The app will display the coffee description and total cost."
+    </string>
+    <string name="demo_decorator_simple_coffee">Simple coffee</string>
+    <string name="demo_decorator_milk">, Milk</string>
+    <string name="demo_decorator_sugar">, Sugar</string>
+    <string name="demo_decorator_vanilla">, Vanilla</string>
+    <string name="demo_decorator_chb_add_milk">Add Milk</string>
+    <string name="demo_decorator_chb_add_sugar">Add Sugar</string>
+    <string name="demo_decorator_chb_add_vanilla">Add Vanilla</string>
+    <string name="demo_decorator_btn_make_coffee">Make Coffee</string>
+    <string name="demo_decorator_coffee_info_result">Coffee info: %1$s\nTotal cost: $%2$.2f</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>

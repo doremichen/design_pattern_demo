@@ -13,6 +13,8 @@
     <data titleRes="title_demo_mediator" clsname="com.adam.app.design.pattern.demo.mediator.DemoMediatorMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_command" clsname="com.adam.app.design.pattern.demo.command.DemoCommandMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_chain_of_responsibility" clsname="com.adam.app.design.pattern.demo.chain_of_responsibility.DemoChainMain" pkgname="com.adam.app.design.pattern.demo"/>
+    <data titleRes="title_demo_decorator" clsname="com.adam.app.design.pattern.demo.decorator.DemoDecoratorMain" pkgname="com.adam.app.design.pattern.demo"/>
+
 
 
 
