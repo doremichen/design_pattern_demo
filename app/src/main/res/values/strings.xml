@@ -105,6 +105,7 @@
     <string name="title_demo_chain_of_responsibility">Demo chain of responsibility pattern</string>
     <string name="title_demo_decorator">Demo decorator pattern</string>
     <string name="title_demo_strategy">Demo strategy pattern</string>
+    <string name="title_demo_adapter">Demo adapter pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -239,6 +240,14 @@
     <string name="label_seasonal_discount">Seasonal (10%)</string>
     <string name="label_clearance_discount">Clearance (50%)</string>
     <string name="demo_strategy_btn_calculate">Calculate</string>
+    <string name="demo_adapter_instruction">
+        "Adapter Pattern allows incompatible interfaces to work together.\n"
+        "    In this example, we have a legacy player that only supports MP3.\n"
+        "    We use an Adapter to play MP3, MP4, and VLC files via the same interface."
+    </string>
+    <string name="demo_adapter_hint_enter_filename">Enter filename</string>
+    <string name="demo_adapter_btn_play">Play</string>
+    <string name="demo_adapter_result_log">Result log...</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
@@ -256,6 +265,11 @@
         <item>@string/label_no_discount</item>
         <item>@string/label_seasonal_discount</item>
         <item>@string/label_clearance_discount</item>
+    </string-array>
+    <string-array name="media_formats">
+        <item>mp3</item>
+        <item>mp4</item>
+        <item>vlc</item>
     </string-array>
 
 </resources>
