@@ -106,6 +106,7 @@
     <string name="title_demo_decorator">Demo decorator pattern</string>
     <string name="title_demo_strategy">Demo strategy pattern</string>
     <string name="title_demo_adapter">Demo adapter pattern</string>
+    <string name="title_demo_iterator">Demo iterator pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -248,6 +249,24 @@
     <string name="demo_adapter_hint_enter_filename">Enter filename</string>
     <string name="demo_adapter_btn_play">Play</string>
     <string name="demo_adapter_result_log">Result log...</string>
+    <string name="demo_iterator_instruction">
+        "Iterator Pattern provides a way to access elements of a collection sequentially without exposing its underlying representation.\n"
+        "\n"
+        "In this demo:\n"
+        "- We have a collection of fruit items.\n"
+        "- By pressing \"Show Items\", we use an Iterator to traverse the collection.\n"
+        "- The iterator follows a simple pattern: hasNext() to check if more items exist, and next() to get the next item.\n"
+        "\n"
+        "This demonstrates how to decouple traversal logic from the collection structure.\n"
+        "\n"
+        "Usage:\n"
+        "1. Tap \"Show Items\" to view the list of items via the Iterator.\n"
+        "2. Observe how the logic does not rely on direct list access (no get(index)).\n"
+        "\n"
+        "This pattern is useful for designing APIs that expose iteration without revealing implementation details."
+    </string>
+    <string name="demo_iterator_btn_show_items">Show Items</string>
+    <string name="demo_iterator_tv_items_will_be_listed_here">Items will be listed here...</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>

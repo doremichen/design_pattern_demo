@@ -13,6 +13,12 @@
         android:theme="@style/Theme.DesignPatternDemo"
         tools:targetApi="31">
         <activity
+            android:name=".iterator.DemoIteratorStart"
+            android:exported="false" />
+        <activity
+            android:name=".iterator.DemoIteratorMain"
+            android:exported="false" />
+        <activity
             android:name=".adapter.DemoAdapterStart"
             android:exported="false" />
         <activity
