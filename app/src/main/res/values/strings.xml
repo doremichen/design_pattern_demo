@@ -110,6 +110,7 @@
     <string name="title_demo_composite">Demo composite pattern</string>
     <string name="title_demo_observer">Demo observer pattern</string>
     <string name="title_demo_facade">Demo facade pattern</string>
+    <string name="title_demo_memento">Demo memento pattern</string>"
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -322,6 +323,22 @@
     <string name="demo_facade_et_hint_enter_song_name">Enter song name</string>
     <string name="demo_facade_btn_play_song">Play Song</string>
     <string name="demo_facade_tv_log">Log:</string>
+    <string name="demo_memento_instruction">
+        "Memento Pattern allows saving and restoring the internal state of an object without violating encapsulation.\n"
+        "\n"
+        "In this demo:\n"
+        "- You can input some text and press [Save] to store the current state.\n"
+        "- Press [Undo] to revert the text back to the last saved state.\n"
+        "\n"
+        "It's useful in situations like Undo/Redo operations in editors."
+    </string>
+    <string name="demo_memento_et_hint_enter_text">Enter text...</string>
+    <string name="demo_memento_btn_save">Save</string>
+    <string name="demo_memento_btn_undo">Undo</string>
+    <string name="demo_memento_tv_state_log_will_show_here">State log will show here.</string>
+    <string name="demo_memento_state_log_save_success">State saved: %1$s</string>
+    <string name="demo_memento_state_log_undo_success">State restored: %1$s</string>
+    <string name="demo_memento_state_log_undo_fail">No save state</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>

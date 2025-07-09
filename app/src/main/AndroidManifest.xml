@@ -13,6 +13,12 @@
         android:theme="@style/Theme.DesignPatternDemo"
         tools:targetApi="31">
         <activity
+            android:name=".memento.DemoMementoStart"
+            android:exported="false" />
+        <activity
+            android:name=".memento.DemoMementoMain"
+            android:exported="false" />
+        <activity
             android:name=".facade.DemoFacadeStart"
             android:exported="false" />
         <activity
