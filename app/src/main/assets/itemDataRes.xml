@@ -18,7 +18,5 @@
     <data titleRes="title_demo_adapter" clsname="com.adam.app.design.pattern.demo.adapter.DemoAdapterMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_iterator" clsname="com.adam.app.design.pattern.demo.iterator.DemoIteratorMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_composite" clsname="com.adam.app.design.pattern.demo.composite.DemoCompositeMain" pkgname="com.adam.app.design.pattern.demo"/>
-
-
-
+    <data titleRes="title_demo_observer" clsname="com.adam.app.design.pattern.demo.observer.DemoObserverMain" pkgname="com.adam.app.design.pattern.demo"/>
 </List>

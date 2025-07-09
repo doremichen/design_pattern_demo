@@ -108,6 +108,7 @@
     <string name="title_demo_adapter">Demo adapter pattern</string>
     <string name="title_demo_iterator">Demo iterator pattern</string>
     <string name="title_demo_composite">Demo composite pattern</string>
+    <string name="title_demo_observer">Demo observer pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -287,6 +288,23 @@
         "2. Observe how both files and folders are processed uniformly via the `display()` method."
     </string>
     <string name="demo_composite_btn_build_structure">Build Structure</string>
+    <string name="demo_observer_instruction">
+        "The Observer Pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.\n"
+        "\n"
+        "In this demo:\n"
+        "- A Subject holds data (e.g. temperature).\n"
+        "- Observers register to receive updates when the Subject changes.\n"
+        "- When you update the value, all Observers display the change.\n"
+        "\n"
+        "Usage:\n"
+        "1. Tap \"Update Temperature\".\n"
+        "2. Observe how multiple UI components are notified of the change."
+    </string>
+    <string name="demo_observer_et_hint_enter_temperature">Enter temperature</string>
+    <string name="demo_observer_btn_update_temperature">Update Temperature</string>
+    <string name="demo_observer_tv_observer_1">Observer 1: -- %1$s</string>
+    <string name="demo_observer_tv_observer_2">Observer 2: -- %1$s</string>
+    <string name="toast_error_empty_temperature">Empty tempearture! Please input the non empty value!</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.DesignPatternDemo"
         tools:targetApi="31">
         <activity
+            android:name=".observer.DemoObserverStart"
+            android:exported="false" />
+        <activity
+            android:name=".observer.DemoObserverMain"
+            android:exported="false" />
+        <activity
             android:name=".composite.DemoCompositeStart"
             android:exported="false" />
         <activity
