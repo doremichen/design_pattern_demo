@@ -109,6 +109,7 @@
     <string name="title_demo_iterator">Demo iterator pattern</string>
     <string name="title_demo_composite">Demo composite pattern</string>
     <string name="title_demo_observer">Demo observer pattern</string>
+    <string name="title_demo_facade">Demo facade pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -305,6 +306,22 @@
     <string name="demo_observer_tv_observer_1">Observer 1: -- %1$s</string>
     <string name="demo_observer_tv_observer_2">Observer 2: -- %1$s</string>
     <string name="toast_error_empty_temperature">Empty tempearture! Please input the non empty value!</string>
+    <string name="demo_facade_instruction">
+        "The Facade Pattern provides a simplified interface to a complex subsystem.\n"
+        "\n"
+        "    In this demo, we simulate a music player. Internally, it involves:\n"
+        "    - Decoding the music file\n"
+        "    - Loading buffers\n"
+        "    - Outputting audio to speakers\n"
+        "\n"
+        "    The UI only interacts with the Facade class which handles all the underlying complexity."
+    </string>
+    <string name="demo_facade_decoding_song">"Decoding song: "</string>
+    <string name="demo_facade_buffer_loaded_successfully">Buffer loaded successfully.</string>
+    <string name="demo_facade_audio_output_started">Now playing audio through speaker.</string>
+    <string name="demo_facade_et_hint_enter_song_name">Enter song name</string>
+    <string name="demo_facade_btn_play_song">Play Song</string>
+    <string name="demo_facade_tv_log">Log:</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
