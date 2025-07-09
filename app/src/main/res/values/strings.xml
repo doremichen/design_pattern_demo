@@ -107,6 +107,7 @@
     <string name="title_demo_strategy">Demo strategy pattern</string>
     <string name="title_demo_adapter">Demo adapter pattern</string>
     <string name="title_demo_iterator">Demo iterator pattern</string>
+    <string name="title_demo_composite">Demo composite pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -267,6 +268,25 @@
     </string>
     <string name="demo_iterator_btn_show_items">Show Items</string>
     <string name="demo_iterator_tv_items_will_be_listed_here">Items will be listed here...</string>
+    <string name="demo_composite_instruction">
+        "The Composite Pattern allows clients to treat individual objects and compositions of objects uniformly.\n"
+        "\n"
+        "In this demo:\n"
+        "- We model a folder structure where a folder can contain files and subfolders.\n"
+        "- Each item implements a common interface with the `display()` method.\n"
+        "\n"
+        "By clicking \"Build Structure\", we build a sample folder hierarchy and display its contents.\n"
+        "\n"
+        "This pattern is useful for:\n"
+        "- Tree structures (like file systems)\n"
+        "- Organizational hierarchies\n"
+        "- UI component trees\n"
+        "\n"
+        "Usage:\n"
+        "1. Tap \"Build Structure\".\n"
+        "2. Observe how both files and folders are processed uniformly via the `display()` method."
+    </string>
+    <string name="demo_composite_btn_build_structure">Build Structure</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>

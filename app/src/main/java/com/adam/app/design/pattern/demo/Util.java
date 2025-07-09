@@ -6,8 +6,11 @@
 package com.adam.app.design.pattern.demo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
+
+import java.lang.ref.WeakReference;
 
 public final class Util {
     private Util() {
@@ -57,5 +60,28 @@ public final class Util {
      */
     public static void toast(Context context, String msg) {
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * start activity
+     * @param context Context.
+     * @param cls Class to start.
+     */
+    public static void startActivity(Context context, Class<?> cls) {
+        WeakReference<Context> weakContext = new WeakReference<>(context);
+        Context context1 = weakContext.get();
+        context1.startActivity(new Intent(context1, cls));
+    }
+
+    /**
+     * Back to main activity.
+     * @param context Context.
+     */
+    public static void backToMainActivity(Context context) {
+        WeakReference<Context> weakContext = new WeakReference<>(context);
+        Context context1 = weakContext.get();
+        final Intent intent = new Intent(context1, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        context1.startActivity(intent);
     }
 }
