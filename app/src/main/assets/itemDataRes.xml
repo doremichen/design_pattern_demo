@@ -24,6 +24,6 @@
     <data titleRes="title_demo_visitor" clsname="com.adam.app.design.pattern.demo.visitor.DemoVisitorMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_state" clsname="com.adam.app.design.pattern.demo.state.DemoStateMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_interpreter" clsname="com.adam.app.design.pattern.demo.interpreter.DemoInterpreterMain" pkgname="com.adam.app.design.pattern.demo"/>
-
+    <data titleRes="title_demo_flyweight" clsname="com.adam.app.design.pattern.demo.flyweight.DemoFlyweightMain" pkgname="com.adam.app.design.pattern.demo"/>
 
 </List>

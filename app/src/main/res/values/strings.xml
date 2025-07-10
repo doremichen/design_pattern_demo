@@ -114,6 +114,7 @@
     <string name="title_demo_visitor">Demo visitor pattern</string>
     <string name="title_demo_state">Demo state pattern</string>
     <string name="title_demo_interpreter">Demo interpreter pattern</string>
+    <string name="title_demo_flyweight">Demo flyweight pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -413,6 +414,13 @@
     <string name="demo_interpreter_tv_result_will_appear_here">Result will appear here</string>
     <string name="demo_interpreter_error_invalid_expression">Error: Invalid expression.</string>
     <string name="demo_interpreter_simple_calculate">Simple calculate: (+/-)</string>
+    <string name="demo_flyweight_instruction">
+        "The Flyweight Pattern is a structural design pattern that allows sharing of common parts of object state to reduce memory usage.\\n\\n\n"
+        "In this demo, we simulate drawing chess pieces (black or white) on a board. Instead of creating a new object every time, we use a factory to reuse shared instances of black and white pieces.\\n\\n\n"
+        "This helps improve performance and conserve memory, especially when dealing with a large number of similar objects.\\n\\n\n"
+        "Tap the \"Add Piece\" button to simulate placing pieces on the board and observe that only two instances (black and white) are ever created, regardless of how many you add.\n"
+    </string>
+    <string name="demo_flyweight_btn_place_piece">Place Piece</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
@@ -439,6 +447,10 @@
     <string-array name="visitor_type_options">
         <item>@string/demo_visitor_area_visitor</item>
         <item>@string/demo_visitor_draw_visitor</item>
+    </string-array>
+    <string-array name="piece_colors">
+        <item>Black</item>
+        <item>White</item>
     </string-array>
 
 </resources>
