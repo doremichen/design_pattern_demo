@@ -21,5 +21,7 @@
     <data titleRes="title_demo_observer" clsname="com.adam.app.design.pattern.demo.observer.DemoObserverMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_facade" clsname="com.adam.app.design.pattern.demo.facade.DemoFacadeMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_memento" clsname="com.adam.app.design.pattern.demo.memento.DemoMementoMain" pkgname="com.adam.app.design.pattern.demo"/>
+    <data titleRes="title_demo_visitor" clsname="com.adam.app.design.pattern.demo.visitor.DemoVisitorMain" pkgname="com.adam.app.design.pattern.demo"/>
+
 
 </List>

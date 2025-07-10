@@ -110,7 +110,8 @@
     <string name="title_demo_composite">Demo composite pattern</string>
     <string name="title_demo_observer">Demo observer pattern</string>
     <string name="title_demo_facade">Demo facade pattern</string>
-    <string name="title_demo_memento">Demo memento pattern</string>"
+    <string name="title_demo_memento">Demo memento pattern</string>
+    <string name="title_demo_visitor">Demo visitor pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -339,6 +340,26 @@
     <string name="demo_memento_state_log_save_success">State saved: %1$s</string>
     <string name="demo_memento_state_log_undo_success">State restored: %1$s</string>
     <string name="demo_memento_state_log_undo_fail">No save state</string>
+    <string name="demo_vistor_instruction">
+        "The Visitor Pattern lets you add new operations to existing object structures \n"
+        "without modifying those structures.\n"
+        "\n"
+        "It separates algorithms from the objects on which they operate, enabling:\n"
+        "- Open/Closed Principle: Add new operations without altering existing class logic.\n"
+        "- Flexibility: You can define multiple visitors for different purposes.\n"
+        "\n"
+        "In this demo, we will apply multiple visitors to shape objects:\n"
+        "1. AreaCalculatorVisitor – to calculate area\n"
+        "2. DrawingVisitor – to simulate rendering text"
+    </string>
+    <string name="demo_visitor_btn_run_visitor_demo">Run Visitor Demo</string>
+    <string name="demo_visitor_circle_area">"Circle area: "</string>
+    <string name="demo_visitor_rectangle_area">"Rectangle area: "</string>
+    <string name="demo_visitor_draw_circle_with_radius">"Draw circle with radius "</string>
+    <string name="demo_visitor_draw_rectangle">"Draw rectangle "</string>
+    <string name="demo_visitor_x">" x "</string>
+    <string name="demo_visitor_draw_visitor">Draw Visitor</string>
+    <string name="demo_visitor_area_visitor">Area Visitor</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
@@ -361,6 +382,10 @@
         <item>mp3</item>
         <item>mp4</item>
         <item>vlc</item>
+    </string-array>
+    <string-array name="visitor_type_options">
+        <item>@string/demo_visitor_area_visitor</item>
+        <item>@string/demo_visitor_draw_visitor</item>
     </string-array>
 
 </resources>
