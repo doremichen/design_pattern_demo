@@ -115,6 +115,7 @@
     <string name="title_demo_state">Demo state pattern</string>
     <string name="title_demo_interpreter">Demo interpreter pattern</string>
     <string name="title_demo_flyweight">Demo flyweight pattern</string>
+    <string name="title_demo_bridge">Demo bridge pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -421,6 +422,27 @@
         "Tap the \"Add Piece\" button to simulate placing pieces on the board and observe that only two instances (black and white) are ever created, regardless of how many you add.\n"
     </string>
     <string name="demo_flyweight_btn_place_piece">Place Piece</string>
+    <string name="demo_bridge_instruction">
+        "Bridge Pattern\n"
+        "\n"
+        "The Bridge Pattern is a structural design pattern that decouples an abstraction from its implementation so that the two can vary independently.\n"
+        "\n"
+        "In this demo, we demonstrate a remote control (the abstraction) that can operate on different devices (the implementation), such as a TV or a Radio.\n"
+        "\n"
+        "This pattern allows you to extend either the remote or the device independently without modifying the other.\n"
+        "\n"
+        "Select a device type.\n"
+        "Use the toggle and volume buttons to control the device.\n"
+        "Observe how the abstraction (Remote) communicates with the device (TV or Radio)."
+    </string>
+    <string name="demo_bridge_tv_is">"TV is "</string>
+    <string name="demo_bridge_on">ON</string>
+    <string name="demo_bridge_off">OFF</string>
+    <string name="demo_bridge_volume">", Volume: "</string>
+    <string name="demo_bridge_radio_is">"Radio is "</string>
+    <string name="demo_bridge_btn_toggle_power">Toggle Power</string>
+    <string name="demo_bridge_btn_volume_plus">Volume +</string>
+    <string name="demo_bridge_btn_volume_minus">Volume -</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
@@ -451,6 +473,10 @@
     <string-array name="piece_colors">
         <item>Black</item>
         <item>White</item>
+    </string-array>
+    <string-array name="bridge_devices">
+        <item>TV</item>
+        <item>Radio</item>
     </string-array>
 
 </resources>
