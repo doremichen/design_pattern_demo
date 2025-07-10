@@ -113,6 +113,7 @@
     <string name="title_demo_memento">Demo memento pattern</string>
     <string name="title_demo_visitor">Demo visitor pattern</string>
     <string name="title_demo_state">Demo state pattern</string>
+    <string name="title_demo_interpreter">Demo interpreter pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -385,6 +386,33 @@
     <string name="demo_state_btn_play">Play</string>
     <string name="demo_state_btn_pause">Pause</string>
     <string name="demo_state_btn_stop">Stop</string>
+    <string name="demo_interpreter_instruction">
+        "This demo showcases the Interpreter Pattern applied to arithmetic expression evaluation.\n"
+        "\n"
+        "Supported features:\n"
+        "• Basic arithmetic operations:, -, *, /\n"
+        "• Parentheses for grouping: ()\n"
+        "• Left-to-right evaluation\n"
+        "• Integer-only calculation\n"
+        "\n"
+        "Example expressions:\n"
+        "• 3 5 * 2\n"
+        "• (4 6) / 2 - 1\n"
+        "• 10 - (3 2) * 2\n"
+        "\n"
+        "Instructions:\n"
+        "1. Enter an arithmetic expression in the input field.\n"
+        "2. Press \"Evaluate\" to see the result calculated using Interpreter logic.\n"
+        "3. Only spaces between tokens are required (e.g., \"3 5\", not \"3+5\").\n"
+        "\n"
+        "Note:\n"
+        "This is a simplified interpreter for demonstration purposes. No floating-point or variable support.";
+    </string>
+    <string name="demo_interpreter_et_hint_enter_expression_e_g_5_3_2_1">Enter expression (e.g. 5 + 3 * ( 2 + 1 ))</string>
+    <string name="demo_interpreter_btn_evaluate">Evaluate</string>
+    <string name="demo_interpreter_tv_result_will_appear_here">Result will appear here</string>
+    <string name="demo_interpreter_error_invalid_expression">Error: Invalid expression.</string>
+    <string name="demo_interpreter_simple_calculate">Simple calculate: (+/-)</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
