@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="chessboard_background_gray">#CCCCCC</color>
+    <color name="my_app_background">#C8E6C9</color>
 </resources>
