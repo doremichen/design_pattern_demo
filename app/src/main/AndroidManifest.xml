@@ -13,6 +13,12 @@
         android:theme="@style/Theme.DesignPatternDemo"
         tools:targetApi="31">
         <activity
+            android:name=".state.DemoStateStart"
+            android:exported="false" />
+        <activity
+            android:name=".state.DemoStateMain"
+            android:exported="false" />
+        <activity
             android:name=".visitor.DemoVisitorStart"
             android:exported="false" />
         <activity

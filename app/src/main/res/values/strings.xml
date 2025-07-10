@@ -112,6 +112,7 @@
     <string name="title_demo_facade">Demo facade pattern</string>
     <string name="title_demo_memento">Demo memento pattern</string>
     <string name="title_demo_visitor">Demo visitor pattern</string>
+    <string name="title_demo_state">Demo state pattern</string>
 
 
     <string name="tv_welcome_to_demo">Welcome to demo design pattern</string>
@@ -360,6 +361,30 @@
     <string name="demo_visitor_x">" x "</string>
     <string name="demo_visitor_draw_visitor">Draw Visitor</string>
     <string name="demo_visitor_area_visitor">Area Visitor</string>
+    <string name="demo_state_instruction">
+        "The State Pattern allows an object to change its behavior when its internal state changes. \n"
+        "It appears as if the object changed its class.\n"
+        "\n"
+        "In this demo, we simulate a music player that can be in three states:\n"
+        "- Stopped\n"
+        "- Playing\n"
+        "- Paused\n"
+        "\n"
+        "Each button changes the state, and behavior depends on the current state.";
+    </string>
+    <string name="demo_state_switching_to_playing">Switching to Playing...</string>
+    <string name="demo_state_already_stopped_can_t_pause">Already stopped. Can\'t pause.</string>
+    <string name="demo_state_already_stopped">Already stopped.</string>
+    <string name="demo_state_already_playing">Already playing.</string>
+    <string name="demo_state_pausing_music">Pausing music...</string>
+    <string name="demo_state_stopping_playback">Stopping playback...</string>
+    <string name="demo_state_resuming_playback">Resuming playback...</string>
+    <string name="demo_state_already_paused">Already paused.</string>
+    <string name="demo_state_stopping_from_pause">Stopping from pause...</string>
+    <string name="demo_state_tv_current_state">Current State: %1$s</string>
+    <string name="demo_state_btn_play">Play</string>
+    <string name="demo_state_btn_pause">Pause</string>
+    <string name="demo_state_btn_stop">Stop</string>
     <string-array name="character_types">
         <item>Hero</item>
         <item>Mage</item>
