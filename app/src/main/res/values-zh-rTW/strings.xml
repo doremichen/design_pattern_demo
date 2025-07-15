@@ -351,10 +351,13 @@
 <string name="demo_bridge_btn_toggle_power">切換電源</string>
 <string name="demo_bridge_btn_volume_plus">音量 +</string>
 <string name="demo_bridge_btn_volume_minus">音量 -</string>
+<string name="demo_factory_type_hero">英雄</string>
+<string name="demo_factory_type_mage">法師</string>
+<string name="demo_factory_type_archer">弓箭手</string>
 <string-array name="character_types">
-    <item>英雄</item>
-    <item>法師</item>
-    <item>弓箭手</item>
+    <item>@string/demo_factory_type_hero</item>
+    <item>@string/demo_factory_type_mage</item>
+    <item>@string/demo_factory_type_archer</item>
 </string-array>
 <string-array name="factory_types">
     <item>深色主題</item>

@@ -46,7 +46,7 @@ public class DemoFactoryStart extends AppCompatActivity {
 
             String type = selectedItem.toString();
             // create character by SimpleCharacterFactory
-            SimpleCharacterFactory factory = SimpleCharacterFactory.from(type);
+            SimpleCharacterFactory factory = SimpleCharacterFactory.from(this , type);
             ICharacter character = factory.createCharacter();
             // show character name and special ability
             showResult(character);
