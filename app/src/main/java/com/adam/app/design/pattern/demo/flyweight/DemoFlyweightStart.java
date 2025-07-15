@@ -40,7 +40,7 @@ public class DemoFlyweightStart extends AppCompatActivity {
             // get color from spinner
             String color = mBinding.spinnerColor.getSelectedItem().toString();
             // get chess by chess piece factory
-            IChessPiece chess = ChessPieceFactory.getChessPiece(color);
+            IChessPiece chess = ChessPieceFactory.getChessPiece(this , color);
             // set x and y of chess
             int x = 50 + mRandom.nextInt(500);
             int y = 200 + mRandom.nextInt(800);

@@ -354,6 +354,8 @@
 <string name="demo_factory_type_hero">英雄</string>
 <string name="demo_factory_type_mage">法師</string>
 <string name="demo_factory_type_archer">弓箭手</string>
+<string name="demo_flyweight_color_black">黑色</string>
+<string name="demo_flyweight_color_white">白色</string>
 <string-array name="character_types">
     <item>@string/demo_factory_type_hero</item>
     <item>@string/demo_factory_type_mage</item>
@@ -382,8 +384,8 @@
     <item>@string/demo_visitor_draw_visitor</item>
 </string-array>
 <string-array name="piece_colors">
-    <item>黑色</item>
-    <item>白色</item>
+     <item>@string/demo_flyweight_color_black</item>
+     <item>@string/demo_flyweight_color_white</item>
 </string-array>
 <string-array name="bridge_devices">
     <item>電視</item>

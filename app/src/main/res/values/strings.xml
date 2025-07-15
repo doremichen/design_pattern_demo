@@ -357,6 +357,8 @@
     <string name="demo_factory_type_hero">hero</string>
     <string name="demo_factory_type_mage">mage</string>
     <string name="demo_factory_type_archer">archer</string>
+    <string name="demo_flyweight_color_black">Black</string>
+    <string name="demo_flyweight_color_white">White</string>
     <string-array name="character_types">
         <item>@string/demo_factory_type_hero</item>
         <item>@string/demo_factory_type_mage</item>
@@ -385,8 +387,8 @@
         <item>@string/demo_visitor_draw_visitor</item>
     </string-array>
     <string-array name="piece_colors">
-        <item>Black</item>
-        <item>White</item>
+        <item>@string/demo_flyweight_color_black</item>
+        <item>@string/demo_flyweight_color_white</item>
     </string-array>
     <string-array name="bridge_devices">
         <item>TV</item>
