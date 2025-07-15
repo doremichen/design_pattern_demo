@@ -12,7 +12,7 @@
     tools:context=".singleton.DemoSingletonMain">
 
     <TextView
-        android:text="@string/singleton_description"
+        android:text="@string/demo_singleton_instruction"
         android:textSize="18sp"
         android:gravity="center"
         android:padding="16dp"

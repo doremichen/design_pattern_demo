@@ -12,7 +12,7 @@
     tools:context=".factory.DemoFactoryMain">
 
     <TextView
-        android:text="@string/factory_description"
+        android:text="@string/demo_factory_instruction"
         android:textSize="16sp"
         android:gravity="center"
         android:layout_marginBottom="32dp"

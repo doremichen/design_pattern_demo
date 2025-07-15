@@ -1,40 +1,24 @@
 /**
  * Description: This is the main activity of the demo abstract factory pattern.
- * Author: Adam
- * Date: 2023/10/19
+ * Author: Adam cHEN
+ * Date: 2025/07/15
  */
 package com.adam.app.design.pattern.demo.abstract_factory;
 
-import android.content.Intent;
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
+import com.adam.app.design.pattern.demo.BaseInstructionActivity;
 import com.adam.app.design.pattern.demo.R;
-import com.adam.app.design.pattern.demo.databinding.ActivityDemoAbstractFactoryMainBinding;
+import com.adam.app.design.pattern.demo.Util;
 
-public class DemoAbstractFactoryMain extends AppCompatActivity {
-
-    // view binding
-    private ActivityDemoAbstractFactoryMainBinding mBinding;
+public class DemoAbstractFactoryMain extends BaseInstructionActivity {
+    @Override
+    public String getInstruction() {
+        return getString(R.string.demo_abstract_factory_instruction);
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // view binding
-        mBinding = ActivityDemoAbstractFactoryMainBinding.inflate(getLayoutInflater());
-        setContentView(mBinding.getRoot());
-
-        // set start button listener
-        mBinding.btnStartDemo.setOnClickListener(v -> {
-            // start activity
-            Intent intent = new Intent(this, DemoAbstractFactoryStart.class);
-            startActivity(intent);
-        });
+    public void startDemo() {
+        // Start demo abstract factory activity
+        Util.startActivity(this, DemoAbstractFactoryStart.class);
 
     }
 }

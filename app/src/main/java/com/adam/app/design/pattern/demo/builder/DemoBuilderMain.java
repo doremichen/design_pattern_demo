@@ -15,7 +15,7 @@ public class DemoBuilderMain extends BaseInstructionActivity {
 
     @Override
     public String getInstruction() {
-        return getString(R.string.builder_description);
+        return getString(R.string.demo_builder_instruction);
     }
 
     @Override
