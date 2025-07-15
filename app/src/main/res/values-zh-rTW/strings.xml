@@ -1,0 +1,390 @@
+<resources>
+<string name="app_name">設計模式示範</string>
+<string name="title_activity_main">主頁</string>
+<string name="action_settings">設定</string>
+
+<!-- title string -->
+<string name="title_demo_test">哈囉世界</string>
+<string name="title_demo_singleton">單例模式示範</string>
+<string name="title_demo_factory">工廠模式示範</string>
+<string name="title_demo_abstract_factory">抽象工廠模式示範</string>
+<string name="title_demo_template">模板方法模式示範</string>
+<string name="title_demo_builder">建造者模式示範</string>
+<string name="title_demo_proxy">代理模式示範</string>
+<string name="title_demo_prototype">原型模式示範</string>
+<string name="title_demo_mediator">中介者模式示範</string>
+<string name="title_demo_command">命令模式示範</string>
+<string name="title_demo_chain_of_responsibility">責任鏈模式示範</string>
+<string name="title_demo_decorator">裝飾者模式示範</string>
+<string name="title_demo_strategy">策略模式示範</string>
+<string name="title_demo_adapter">適配器模式示範</string>
+<string name="title_demo_iterator">迭代器模式示範</string>
+<string name="title_demo_composite">組合模式示範</string>
+<string name="title_demo_observer">觀察者模式示範</string>
+<string name="title_demo_facade">外觀模式示範</string>
+<string name="title_demo_memento">備忘錄模式示範</string>
+<string name="title_demo_visitor">訪問者模式示範</string>
+<string name="title_demo_state">狀態模式示範</string>
+<string name="title_demo_interpreter">解譯器模式示範</string>
+<string name="title_demo_flyweight">享元模式示範</string>
+<string name="title_demo_bridge">橋接模式示範</string>
+
+<string name="tv_welcome_to_demo">歡迎來到設計模式示範</string>
+<string name="tv_no_data">沒有項目</string>
+<string name="toast_error_occurred_while_parsing_itemdata_xml">解析 itemData.xml 時發生錯誤</string>
+
+<string name="demo_singleton_instruction">單例模式（Singleton）是一種確保全域僅有一個實例存在的設計模式。\n\n我們將展示其效果。</string>
+<string name="btn_start_singleton">開始</string>
+<string name="btn_get_singleton_object">取得 Singleton 物件</string>
+<string name="title_activity_demo_singleton_main">單例模式示範</string>
+<string name="singleton_result_init_1">每次按下按鈕都會呼叫 Singleton.getInstance()\n</string>
+<string name="singleton_result_init_2">看看 ID 是否有改變？\n\n</string>
+<string name="singleton_result_log_1">產生了一個 Singleton 物件！</string>
+
+<string name="demo_factory_instruction">工廠模式（Factory Pattern）\n\n提供一種建立物件的方式，無需指定要建立哪一個具體類別的實例。\n\n本示範將透過工廠建立不同類型的角色。</string>
+<string name="btn_start_factory">開始</string>
+<string name="btn_factory_create_character">建立角色</string>
+<string name="btn_back_to_main_list">回到主選單</string>
+<string name="title_activity_demo_factory_main">工廠模式示範</string>
+<string name="factory_result_character">角色：</string>
+<string name="factory_result_special_ability">特殊技能：</string>
+
+<string name="demo_abstract_factory_instruction">抽象工廠模式提供一個建立相關或相依物件家族的介面，無需指定具體類別。</string>
+<string name="btn_start_abstract_factory">開始</string>
+<string name="title_abstract_factory">抽象工廠模式示範</string>
+<string name="btn_generate_components">產生元件</string>
+<string name="toast_error_no_item_selected">尚未選擇任何項目！</string>
+<string name="dark_theme">深色主題</string>
+<string name="light_theme">淺色主題</string>
+<string name="toast_error_bit_flip">位元反轉錯誤！</string>
+<string name="abstract_factory_result_button">按鈕：</string>
+<string name="abstract_factory_result_text">文字：</string>
+
+<string name="demo_template_instruction">模板方法模式（Template Method Pattern）是一種行為型設計模式，在方法中定義演算法骨架，並將部分步驟延遲到子類別中實作。\n\n此模式讓子類別可以重寫某些步驟而不改變整體流程。\n\n本示範模擬資料匯出流程，使用者可選擇匯出格式（CSV 或 JSON），系統會呼叫對應的子類別並使用 template method 執行：\n\n• openFile()\n• writeHeader()\n• writeData()\n• closeFile()\n\n步驟順序由 template method exportData() 控制，而每個格式類別負責各自的細節實作。\n\n請按下「開始示範」來了解 Template Method Pattern 如何透過繼承靈活實作演算法。</string>
+<string name="btn_start_template">開始</string>
+<string name="title_template_method_pattern">模板方法模式</string>
+<string name="btn_template_run_export">執行匯出</string>
+
+<string name="demo_builder_instruction">建造者模式（Builder Pattern）：逐步構建複雜物件，允許用相同建構邏輯產生不同表示。</string>
+<string name="btn_start_builder">開始</string>
+<string name="btn_builder_create_computer">建立電腦</string>
+<string name="cp_info_cpu">處理器：</string>
+<string name="cp_info_ram"> 記憶體：</string>
+<string name="cp_info_hdd"> 硬碟：</string>
+<string name="cp_info_gpu"> 顯示卡：</string>
+<string name="demo_builder_result_init_info">結果會顯示於此。</string>
+<string name="cb_demo_builder_add_cpu">加入 CPU</string>
+<string name="cb_demo_builder_add_ram">加入 RAM</string>
+<string name="cb_demo_builder_add_storage">加入儲存裝置</string>
+<string name="cb_demo_builder_add_gpu">加入 GPU</string>
+
+<string name="demo_proxy_description">請按下「開始示範」來查看結果</string>
+<string name="btn_demo_proxy_start_demo">開始示範</string>
+<string name="demo_proxy_result_init_info">結果日誌將顯示於此…</string>
+<string name="demo_proxy_instruction">代理模式（Proxy Pattern）為其他物件提供一種代理以控制對它的訪問。\n\n本示範中，代理會延遲建立實際影片播放器並記錄存取。</string>
+
+<string name="btn_demo_prototype_clone_character">複製角色</string>
+<string name="demo_prototype_instruction">原型模式（Prototype Pattern）允許透過複製現有物件來建立新物件，而非從頭建立。\n\n這對於建立成本高或需避免與具體類別耦合的場景特別有用。\n\n主要好處：\n- 避免建立新物件的開銷\n- 簡化初始化邏輯\n- 適合用於物件註冊表、GUI 編輯器等情境\n\n本示範將展示如何使用 clone() 方法從一個角色樣板複製並自訂，而不影響原始物件。</string>
+<string name="demo_mediator_hint_type_a_message">輸入訊息</string>
+<string name="btn_demo_mediator_send">送出</string>
+<string name="demo_mediator_hint_enter_your_name">請輸入您的名稱</string>
+<string name="demo_mediator_hint_enter_your_message">請輸入您的訊息</string>
+<string name="demo_mediator_instruction">
+    本示範透過模擬聊天室來展示中介者模式（Mediator Pattern）。\n
+    \n
+    ChatRoom（中介者）負責處理訊息的傳遞，使用者不會直接彼此通訊，這有助於降低元件間的耦合。\n
+    \n
+    試著輸入使用者名稱與訊息並送出，您將會看到其他使用者透過 ChatRoom 收到訊息。
+</string>
+<string name="toast_please_enter_your_name_and_message">請輸入您的名稱與訊息</string>
+<string name="demo_mediator_receive_message"> 收到訊息：</string>
+<string name="demo_mediator_from"> 來自 </string>
+
+<string name="demo_command_instruction">
+    本示範透過簡單的電燈開關來展示命令模式（Command Pattern）。\n
+    切換開關代表發出一個命令，讓使用者可以開啟或關閉電燈。\n
+    \n
+    - 接收者：Light（電燈）\n
+    - 命令：LightOnCommand、LightOffCommand\n
+    - 呼叫者：RemoteControl（遙控器）\n
+    - 客戶端：使用者介面中的開關與遙控器互動\n
+    命令封裝了動作邏輯，使得發送者與接收者可以解耦。
+</string>
+<string name="demo_command_title_command_pattern_demo">命令模式示範</string>
+<string name="demo_command_light_switch">電燈開關</string>
+
+<string name="demo_chain_instruction">
+    本示範展示了責任鏈模式（Chain of Responsibility Pattern）。\n\n
+    一個支援請求會沿著一系列的處理器傳遞：\n
+    - 初階支援（LowLevelSupport）處理簡單問題。\n
+    - 中階支援（MidLevelSupport）處理中等問題。\n
+    - 高階支援（HighLevelSupport）處理複雜或無法處理的問題。\n\n
+    每個處理器都會判斷是否能處理該請求，否則就交給下一個處理器。\n\n
+    使用方式：\n
+    1. 輸入支援請求（例如：「密碼重設」、「資料庫問題」、「網路當機」）\n
+    2. 點擊「送出請求」\n
+    3. 系統將顯示是哪一層級處理了您的請求。
+</string>
+<string name="demo_chain_et_hint_enter_your_support_request">請輸入您的支援請求</string>
+<string name="demo_chain_btn_send_request">送出請求</string>
+<string name="demo_chain_handled_by_low_level_support">由初階支援處理</string>
+<string name="demo_chain_request_could_not_be_handled">此請求無法被處理</string>
+<string name="demo_chain_handled_by_mid_level_support">由中階支援處理</string>
+<string name="demo_chain_handled_by_high_level_support">由高階支援處理</string>
+<string name="demo_chain_unhandled_request">無法處理的請求</string>
+
+<string name="demo_decorator_instruction">
+    本示範展示了裝飾者模式（Decorator Pattern）。\n\n
+    裝飾者模式可讓您在不修改原始物件結構的情況下，動態地為其新增行為。\n\n
+    我們以基本的咖啡物件為基礎，並依使用者選擇加入牛奶、糖、香草等裝飾者。\n\n
+    使用方式：\n
+    1. 選擇要添加的咖啡配料\n
+    2. 按下「製作咖啡」按鈕\n
+    3. App 將顯示咖啡的描述與總金額
+</string>
+<string name="demo_decorator_simple_coffee">原味咖啡</string>
+<string name="demo_decorator_milk">，牛奶</string>
+<string name="demo_decorator_sugar">，糖</string>
+<string name="demo_decorator_vanilla">，香草</string>
+<string name="demo_decorator_chb_add_milk">加牛奶</string>
+<string name="demo_decorator_chb_add_sugar">加糖</string>
+<string name="demo_decorator_chb_add_vanilla">加香草</string>
+<string name="demo_decorator_btn_make_coffee">製作咖啡</string>
+<string name="demo_decorator_coffee_info_result">咖啡資訊：%1$s\n總金額：$%2$.2f</string>
+
+<string name="strategy_description">
+    策略模式（Strategy Pattern）讓你可以定義一系列的演算法，將它們封裝起來並使它們可以互相替換。\n
+    策略模式允許演算法獨立於使用它的客戶端變化。\n\n
+    在本範例中，你可以為輸入的價格選擇不同的折扣策略：\n
+    • 無折扣\n
+    • 季節性折扣（10%）\n
+    • 清倉折扣（50%）\n\n
+    輸入價格，選擇一個策略，然後按下「計算」來查看最終價格。
+</string>
+<string name="demo_strategy_hint_enter_price">請輸入價格</string>
+<string name="label_no_discount">無折扣</string>
+<string name="label_seasonal_discount">季節性折扣（10%）</string>
+<string name="label_clearance_discount">清倉折扣（50%）</string>
+<string name="demo_strategy_btn_calculate">計算</string>
+
+<string name="demo_adapter_instruction">
+    轉接器模式（Adapter Pattern）允許不相容的介面能夠一起工作。\n
+    在此範例中，我們有一個僅支援 MP3 的舊式播放器。\n
+    我們使用一個轉接器來透過相同介面播放 MP3、MP4 與 VLC 檔案。
+</string>
+<string name="demo_adapter_hint_enter_filename">請輸入檔名</string>
+<string name="demo_adapter_btn_play">播放</string>
+<string name="demo_adapter_result_log">執行結果日誌…</string>
+
+<string name="demo_iterator_instruction">
+    迭代器模式（Iterator Pattern）提供一種方法來依序存取集合中的元素，而不暴露其內部表示方式。\n\n
+    在本範例中：\n
+    - 我們有一個水果集合。\n
+    - 按下「顯示項目」時，我們使用迭代器來遍歷集合。\n
+    - 迭代器遵循簡單的操作方式：使用 hasNext() 判斷是否還有項目，再用 next() 取得下一個項目。\n\n
+    這展示了如何將遍歷邏輯與集合結構解耦。\n\n
+    使用方式：\n
+    1. 點擊「顯示項目」查看集合內容。\n
+    2. 注意遍歷過程中未使用 get(index) 直接存取集合內容。\n\n
+    此模式適合設計不暴露實作細節的 API。
+</string>
+<string name="demo_iterator_btn_show_items">顯示項目</string>
+<string name="demo_iterator_tv_items_will_be_listed_here">項目將在此顯示…</string>
+
+<string name="demo_composite_instruction">
+    組合模式（Composite Pattern）允許客戶端將單一物件與物件的組合以一致的方式處理。\n\n
+    在此範例中：\n
+    - 模擬一個資料夾結構，資料夾可以包含檔案與子資料夾。\n
+    - 每個項目都實作一個共同的介面，其中包含 `display()` 方法。\n\n
+    點擊「建立結構」按鈕，系統將建構一個資料夾層級結構並顯示內容。\n\n
+    此模式適用於：\n
+    - 樹狀結構（如檔案系統）\n
+    - 組織結構\n
+    - UI 元件樹\n\n
+    使用方式：\n
+    1. 點擊「建立結構」。\n
+    2. 觀察如何透過 `display()` 方法一致地處理檔案與資料夾。
+</string>
+<string name="demo_composite_btn_build_structure">建立結構</string>
+
+<string name="demo_observer_instruction">
+    觀察者模式（Observer Pattern）定義了物件之間一對多的依賴關係，使得當一個物件改變狀態時，其所有依賴者都會自動收到通知並更新。\n\n
+    在此範例中：\n
+    - Subject 保存資料（如溫度）。\n
+    - Observers（觀察者）註冊以接收 Subject 改變時的更新。\n
+    - 當你更新溫度時，所有觀察者會即時顯示新的資料。\n\n
+    使用方式：\n
+    1. 點擊「更新溫度」。\n
+    2. 觀察多個 UI 元件如何收到變更通知。
+</string>
+<string name="demo_observer_et_hint_enter_temperature">請輸入溫度</string>
+<string name="demo_observer_btn_update_temperature">更新溫度</string>
+<string name="demo_observer_tv_observer_1">觀察者一：-- %1$s</string>
+<string name="demo_observer_tv_observer_2">觀察者二：-- %1$s</string>
+<string name="toast_error_empty_temperature">溫度不得為空！請輸入有效數值！</string>
+
+<string name="demo_facade_instruction">
+    外觀模式（Facade Pattern）提供一個簡化的介面，以操作複雜的子系統。\n\n
+    在此範例中，我們模擬一個音樂播放器，其內部包含：\n
+    - 解碼音樂檔案\n
+    - 加載緩衝區\n
+    - 將音訊輸出到喇叭\n\n
+    UI 僅需與外觀類別互動，由其負責處理所有底層細節。
+</string>
+<string name="demo_facade_decoding_song">"正在解碼歌曲: "</string>
+<string name="demo_facade_buffer_loaded_successfully">緩衝區載入成功。</string>
+<string name="demo_facade_audio_output_started">正在透過揚聲器播放音訊。</string>
+<string name="demo_facade_et_hint_enter_song_name">輸入歌曲名稱</string>
+<string name="demo_facade_btn_play_song">播放歌曲</string>
+<string name="demo_facade_tv_log">日誌:</string>
+<string name="demo_memento_instruction">
+    "備忘錄模式允許在不違反封裝的情況下，儲存和還原物件的內部狀態。\n"
+    "\n"
+    "在此範例中:\n"
+    "- 您可以輸入一些文字並按下 [儲存] 以儲存目前的狀態。\n"
+    "- 按下 [復原] 可將文字還原到上次儲存的狀態。\n"
+    "\n"
+    "它在編輯器中的復原/重做操作等情況下很有用。"
+</string>
+<string name="demo_memento_et_hint_enter_text">輸入文字...</string>
+<string name="demo_memento_btn_save">儲存</string>
+<string name="demo_memento_btn_undo">復原</string>
+<string name="demo_memento_tv_state_log_will_show_here">狀態日誌將在此處顯示。</string>
+<string name="demo_memento_state_log_save_success">狀態已儲存: %1$s</string>
+<string name="demo_memento_state_log_undo_success">狀態已還原: %1$s</string>
+<string name="demo_memento_state_log_undo_fail">無儲存狀態</string>
+<string name="demo_vistor_instruction">
+    "訪客模式允許您在不修改現有物件結構的情況下，為其新增操作。\n"
+    "\n"
+    "它將演算法與其操作的物件分離，從而實現:\n"
+    "- 開放/封閉原則：在不改變現有類別邏輯的情況下新增操作。\n"
+    "- 靈活性：您可以為不同目的定義多個訪客。\n"
+    "\n"
+    "在此範例中，我們將對形狀物件應用多個訪客:\n"
+    "1. 面積計算訪客 – 計算面積\n"
+    "2. 繪圖訪客 – 模擬文字渲染"
+</string>
+<string name="demo_visitor_btn_run_visitor_demo">執行訪客示範</string>
+<string name="demo_visitor_circle_area">"圓形面積: "</string>
+<string name="demo_visitor_rectangle_area">"矩形面積: "</string>
+<string name="demo_visitor_draw_circle_with_radius">"繪製半徑為 "</string>
+<string name="demo_visitor_draw_rectangle">"繪製矩形 "</string>
+<string name="demo_visitor_x">" x "</string>
+<string name="demo_visitor_draw_visitor">繪圖訪客</string>
+<string name="demo_visitor_area_visitor">面積訪客</string>
+<string name="demo_state_instruction">
+    "狀態模式允許物件在內部狀態改變時改變其行為。\n"
+    "它看起來像是物件改變了其類別。\n"
+    "\n"
+    "在此範例中，我們模擬一個音樂播放器，它可以處於三種狀態:\n"
+    "- 停止\n"
+    "- 播放中\n"
+    "- 暫停\n"
+    "\n"
+    "每個按鈕都會改變狀態，且行為取決於目前的狀態。"
+</string>
+<string name="demo_state_switching_to_playing">切換到播放中...</string>
+<string name="demo_state_already_stopped_can_t_pause">已停止。無法暫停。</string>
+<string name="demo_state_already_stopped">已停止。</string>
+<string name="demo_state_already_playing">正在播放。</string>
+<string name="demo_state_pausing_music">正在暫停音樂...</string>
+<string name="demo_state_stopping_playback">正在停止播放...</string>
+<string name="demo_state_resuming_playback">正在恢復播放...</string>
+<string name="demo_state_already_paused">已暫停。</string>
+<string name="demo_state_stopping_from_pause">從暫停中停止...</string>
+<string name="demo_state_tv_current_state">目前狀態: %1$s</string>
+<string name="demo_state_btn_play">播放</string>
+<string name="demo_state_btn_pause">暫停</string>
+<string name="demo_state_btn_stop">停止</string>
+<string name="demo_interpreter_instruction">
+    "此範例展示了應用於算術表達式求值的解釋器模式。\n"
+    "\n"
+    "支援的功能:\n"
+    "• 基本算術運算: +, -, *, /\n"
+    "• 分組括號: ()\n"
+    "• 由左至右求值\n"
+    "• 僅限整數計算\n"
+    "\n"
+    "範例表達式:\n"
+    "• 3 5 * 2\n"
+    "• (4 6) / 2 - 1\n"
+    "• 10 - (3 2) * 2\n"
+    "\n"
+    "說明:\n"
+    "1. 在輸入欄位中輸入算術表達式。\n"
+    "2. 按下「求值」以查看使用解釋器邏輯計算的結果。\n"
+    "3. 僅需要詞元之間有空格（例如：「3 5」，而不是「3+5」）。\n"
+    "\n"
+    "注意:\n"
+    "這是一個簡化的解釋器，僅用於示範目的。不支援浮點數或變數。"
+</string>
+<string name="demo_interpreter_et_hint_enter_expression_e_g_5_3_2_1">輸入表達式（例如：5 + 3 * ( 2 + 1 )）</string>
+<string name="demo_interpreter_btn_evaluate">求值</string>
+<string name="demo_interpreter_tv_result_will_appear_here">結果將顯示在此處</string>
+<string name="demo_interpreter_error_invalid_expression">錯誤：無效表達式。</string>
+<string name="demo_interpreter_simple_calculate">簡單計算：(+/-)</string>
+<string name="demo_flyweight_instruction">
+    "享元模式是一種結構型設計模式，它允許共享物件狀態的共同部分以減少記憶體使用。\n\n\n"
+    "在此範例中，我們模擬在棋盤上繪製棋子（黑色或白色）。我們不為每次繪製都建立一個新物件，而是使用工廠來重用黑色和白色棋子的共享實例。\n\n\n"
+    "這有助於提高效能並節省記憶體，尤其是在處理大量相似物件時。\n\n\n"
+    "點擊「放置棋子」按鈕以模擬在棋盤上放置棋子，並觀察無論您添加多少個，都只會建立兩個實例（黑色和白色）。\n"
+</string>
+<string name="demo_flyweight_btn_place_piece">放置棋子</string>
+<string name="demo_bridge_instruction">
+    "橋接模式\n"
+    "\n"
+    "橋接模式是一種結構型設計模式，它將抽象與其實現分離，使兩者可以獨立變化。\n"
+    "\n"
+    "在此範例中，我們展示了一個遙控器（抽象）可以操作不同設備（實現），例如電視或收音機。\n"
+    "\n"
+    "此模式允許您獨立擴展遙控器或設備，而無需修改另一個。\n"
+    "\n"
+    "選擇設備類型。\n"
+    "使用切換和音量按鈕來控制設備。\n"
+    "觀察抽象（遙控器）如何與設備（電視或收音機）通訊。"
+</string>
+<string name="demo_bridge_tv_is">"電視為 "</string>
+<string name="demo_bridge_on">開啟</string>
+<string name="demo_bridge_off">關閉</string>
+<string name="demo_bridge_volume">", 音量: "</string>
+<string name="demo_bridge_radio_is">"收音機為 "</string>
+<string name="demo_bridge_btn_toggle_power">切換電源</string>
+<string name="demo_bridge_btn_volume_plus">音量 +</string>
+<string name="demo_bridge_btn_volume_minus">音量 -</string>
+<string-array name="character_types">
+    <item>英雄</item>
+    <item>法師</item>
+    <item>弓箭手</item>
+</string-array>
+<string-array name="factory_types">
+    <item>深色主題</item>
+    <item>淺色主題</item>
+</string-array>
+<string-array name="exporter_types">
+    <item>CSV</item>
+    <item>JSON</item>
+</string-array>
+<string-array name="strategy_types">
+    <item>@string/label_no_discount</item>
+    <item>@string/label_seasonal_discount</item>
+    <item>@string/label_clearance_discount</item>
+</string-array>
+<string-array name="media_formats">
+    <item>mp3</item>
+    <item>mp4</item>
+    <item>vlc</item>
+</string-array>
+<string-array name="visitor_type_options">
+    <item>@string/demo_visitor_area_visitor</item>
+    <item>@string/demo_visitor_draw_visitor</item>
+</string-array>
+<string-array name="piece_colors">
+    <item>黑色</item>
+    <item>白色</item>
+</string-array>
+<string-array name="bridge_devices">
+    <item>電視</item>
+    <item>收音機</item>
+</string-array>
+
+</resources>
