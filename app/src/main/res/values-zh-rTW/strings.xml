@@ -388,8 +388,8 @@
      <item>@string/demo_flyweight_color_white</item>
 </string-array>
 <string-array name="bridge_devices">
-    <item>電視</item>
-    <item>收音機</item>
+    <item>TV</item>
+    <item>Radio</item>
 </string-array>
 
 </resources>
