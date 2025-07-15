@@ -1,34 +1,23 @@
 /**
  * Description: This is the main activity of the template pattern demo.
  * Author: Adam Chen
- * Date: 2025/07/03
+ * Date: 2025/07/15
  */
 package com.adam.app.design.pattern.demo.template;
 
-import android.content.Intent;
-import android.os.Bundle;
+import com.adam.app.design.pattern.demo.BaseInstructionActivity;
+import com.adam.app.design.pattern.demo.R;
+import com.adam.app.design.pattern.demo.Util;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.adam.app.design.pattern.demo.databinding.ActivityDemoTemplateMainBinding;
-
-public class DemoTemplateMain extends AppCompatActivity {
-
-    // view binding
-    private ActivityDemoTemplateMainBinding mBinding;
+public class DemoTemplateMain extends BaseInstructionActivity {
+    @Override
+    public String getInstruction() {
+        return getString(R.string.demo_template_instruction);
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // view binding
-        mBinding = ActivityDemoTemplateMainBinding.inflate(getLayoutInflater());
-        setContentView(mBinding.getRoot());
-        // set start button listener
-        mBinding.btnStartDemo.setOnClickListener(v -> {
-            // next activity
-            Intent intent = new Intent(this, DemoTemplateStart.class);
-            startActivity(intent);
-        });
-
+    public void startDemo() {
+        // start demo template activity
+        Util.startActivity(this, DemoTemplateStart.class);
     }
 }
