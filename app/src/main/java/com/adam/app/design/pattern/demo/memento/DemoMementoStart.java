@@ -39,6 +39,11 @@ public class DemoMementoStart extends AppCompatActivity {
 
         // set save button click listener
         mBinding.btnSave.setOnClickListener(v -> {
+
+            // hide soft keyboard
+            Util.hideSoftKeyboard(this, v);
+
+
             // get text from edit text
             String text = mBinding.edtText.getText().toString();
             // check if text is empty
@@ -47,6 +52,9 @@ public class DemoMementoStart extends AppCompatActivity {
                 Util.toast(this, getString(R.string.demo_memento_et_hint_enter_text));
                 return;
             }
+
+            // clear edit text
+            mBinding.edtText.setText("");
 
             // set text to text editor
             mTextEditor.setText(text);
@@ -63,6 +71,10 @@ public class DemoMementoStart extends AppCompatActivity {
             if (!mCaretaker.hasHistory()) {
                 // show log
                 mBinding.txtLog.setText(getString(R.string.demo_memento_state_log_undo_fail));
+
+                // update edit text
+                mBinding.edtText.setText("");
+
                 return;
             }
             // get last state
