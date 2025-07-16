@@ -10,14 +10,32 @@
     android:fitsSystemWindows="true"
     tools:context=".builder.DemoBuilderStart">
 
+    <!-- 標題 -->
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/title_demo_builder"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <!-- Checkbox -->
     <LinearLayout
         android:id="@+id/checkbox_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:orientation="vertical"
-        android:padding="8dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -25,43 +43,52 @@
             android:id="@+id/checkbox_cpu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cb_demo_builder_add_cpu" />
+            android:text="@string/cb_demo_builder_add_cpu"
+            android:textColor="@color/black"/>
 
         <CheckBox
             android:id="@+id/checkbox_ram"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cb_demo_builder_add_ram" />
+            android:text="@string/cb_demo_builder_add_ram"
+            android:textColor="@color/black"/>
 
         <CheckBox
             android:id="@+id/checkbox_storage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cb_demo_builder_add_storage" />
+            android:text="@string/cb_demo_builder_add_storage"
+            android:textColor="@color/black"/>
 
         <CheckBox
             android:id="@+id/checkbox_gpu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cb_demo_builder_add_gpu" />
+            android:text="@string/cb_demo_builder_add_gpu"
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <!-- 建立按鈕 -->
     <Button
         android:id="@+id/btn_create_computer"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/btn_builder_create_computer"
         app:layout_constraintTop_toBottomOf="@id/checkbox_container"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- 結果 TextView -->
     <TextView
         android:id="@+id/txt_result"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:padding="10dp"
@@ -72,19 +99,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btn_back_to_main"
         android:background="@android:color/darker_gray"
-        android:textAlignment="center"
-        android:minHeight="100dp" />
+        android:textAlignment="center"/>
 
     <!-- 返回主選單 -->
     <Button
         android:id="@+id/btn_back_to_main"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_back_to_main_list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
