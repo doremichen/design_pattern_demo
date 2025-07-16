@@ -28,6 +28,10 @@ public class DemoFacadeStart extends AppCompatActivity {
 
         // set play button click listener
         mBinding.btnPlay.setOnClickListener(v -> {
+
+            // dismiss soft keyboard
+            Util.hideSoftKeyboard(this, v);
+
             // get song name
             String songName = mBinding.edtSongName.getText().toString();
 
