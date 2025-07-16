@@ -11,6 +11,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.adam.app.design.pattern.demo.MainActivity;
+import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.chain_of_responsibility.handler.HighLevelSupport;
 import com.adam.app.design.pattern.demo.chain_of_responsibility.handler.LowLevelSupport;
 import com.adam.app.design.pattern.demo.chain_of_responsibility.handler.MidLevelSupport;
@@ -33,6 +34,9 @@ public class DemoChainStart extends AppCompatActivity {
 
         // set send request button click listener
         mBinding.btnSendRequest.setOnClickListener(v -> {
+            // dismiss input keyboard
+            Util.hideSoftKeyboard(this, v);
+
             // get request
             String request = mBinding.edtRequestInput.getText().toString();
             // handle request

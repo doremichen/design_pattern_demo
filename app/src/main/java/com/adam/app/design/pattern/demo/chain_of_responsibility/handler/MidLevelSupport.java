@@ -17,7 +17,7 @@ public class MidLevelSupport extends SupportHandler{
         if (request != null) {
 
             // check request type
-            if (request.toLowerCase().contains(DATABASE) || request.toLowerCase().contains(EMAIL)) {
+            if (request.toLowerCase().contains(DATABASE) || request.toLowerCase().contains(ISSUE)) {
                 return context.getString(R.string.demo_chain_handled_by_mid_level_support);
             }
 

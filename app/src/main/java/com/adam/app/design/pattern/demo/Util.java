@@ -8,6 +8,7 @@ package com.adam.app.design.pattern.demo;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
@@ -84,4 +85,22 @@ public final class Util {
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         context1.startActivity(intent);
     }
+
+    /**
+     * hideSoftKeyboard
+     * @param context Context.
+     * @param view View
+     */
+    public static void hideSoftKeyboard(Context context, View view) {
+        WeakReference<Context> weakContext = new WeakReference<>(context);
+        Context context1 = weakContext.get();
+        if (context1 != null) {
+            android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) context1.getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm != null) {
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+            }
+        }
+
+    }
+
 }

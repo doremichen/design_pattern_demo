@@ -14,7 +14,7 @@ public abstract class SupportHandler {
     public static final String LOGIN = "login";
     // Mid
     public static final String DATABASE = "database";
-    public static final String EMAIL = "email";
+    public static final String ISSUE = "issue";
     // High
     public static final String NETWORK = "network";
     public static final String CRASH = "crash";
