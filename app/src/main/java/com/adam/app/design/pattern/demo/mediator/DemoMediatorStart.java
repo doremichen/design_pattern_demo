@@ -53,6 +53,10 @@ public class DemoMediatorStart extends AppCompatActivity {
 
         // set send message button click listener
         mBinding.btnSend.setOnClickListener(v -> {
+
+            // hide soft keyboard
+            Util.hideSoftKeyboard(this, v);
+
             String userName = mBinding.edtUserName.getText().toString();
             String message = mBinding.edtMessage.getText().toString();
             if (message.isEmpty() || userName.isEmpty()) {
