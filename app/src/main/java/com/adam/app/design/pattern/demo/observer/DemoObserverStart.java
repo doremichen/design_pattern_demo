@@ -54,6 +54,10 @@ public class DemoObserverStart extends AppCompatActivity {
 
         // set update button click listener
         mBinding.btnUpdate.setOnClickListener(v -> {
+
+            // hide soft keyboard
+            Util.hideSoftKeyboard(this, v);
+
             // get new temperature from edit text
             String newTemp = mBinding.edtTemperature.getText().toString();
             // check if new temperature is empty
