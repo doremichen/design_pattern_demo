@@ -9,12 +9,30 @@
     android:fitsSystemWindows="true"
     tools:context=".iterator.DemoIteratorStart">
 
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/title_demo_iterator"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
     <Button
         android:id="@+id/btn_show_items"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/demo_iterator_btn_show_items"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -22,12 +40,13 @@
         android:id="@+id/txt_result"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/demo_iterator_tv_items_will_be_listed_here"
         android:textSize="16sp"
         android:textColor="@android:color/black"
-        android:padding="8dp"
-        android:background="#EEEEEE"
+        android:background="@color/grey_background"
         app:layout_constraintTop_toBottomOf="@id/btn_show_items"
         app:layout_constraintBottom_toTopOf="@id/btn_back_to_main"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,8 +54,10 @@
 
     <Button
         android:id="@+id/btn_back_to_main"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/btn_back_to_main_list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
