@@ -9,41 +9,66 @@
     android:fitsSystemWindows="true"
     tools:context=".interpreter.DemoInterpreterStart">
 
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/title_demo_interpreter"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <EditText
         android:id="@+id/edt_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:hint="@string/demo_interpreter_et_hint_enter_expression_e_g_5_3_2_1"
         android:inputType="text"
         android:autofillHints="text"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/btn_simple"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/demo_interpreter_simple_calculate"
         app:layout_constraintTop_toBottomOf="@id/edt_input"
         app:layout_constraintStart_toEndOf="@id/btn_eval"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintBottom_toTopOf="@id/txt_result"/>
 
     <Button
         android:id="@+id/btn_eval"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/demo_interpreter_btn_evaluate"
         app:layout_constraintTop_toBottomOf="@id/edt_input"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn_simple"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintEnd_toStartOf="@id/btn_simple" />
 
     <TextView
         android:id="@+id/txt_result"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/demo_interpreter_tv_result_will_appear_here"
         android:textColor="@android:color/black"
         android:padding="12dp"
@@ -52,12 +77,14 @@
         app:layout_constraintTop_toBottomOf="@id/btn_eval"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"/>
+        app:layout_constraintBottom_toTopOf="@id/btn_back_to_main"/>
 
     <Button
         android:id="@+id/btn_back_to_main"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/btn_back_to_main_list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

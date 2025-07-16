@@ -29,6 +29,10 @@ public class DemoInterpreterStart extends AppCompatActivity {
 
         // set evaluating button click listener
         mBinding.btnEval.setOnClickListener(view -> {
+
+            // hide soft keyboard
+            Util.hideSoftKeyboard(this, view);
+
            // get user input
            String expression = mBinding.edtInput.getText().toString();
             try {
@@ -45,6 +49,10 @@ public class DemoInterpreterStart extends AppCompatActivity {
 
         // set simple calculate button click listener
         mBinding.btnSimple.setOnClickListener(view1 -> {
+
+            // hide soft keyboard
+            Util.hideSoftKeyboard(this, view1);
+
             // get user input
             String expression = mBinding.edtInput.getText().toString();
             try {
