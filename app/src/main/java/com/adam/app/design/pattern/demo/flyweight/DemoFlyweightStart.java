@@ -6,9 +6,11 @@
 package com.adam.app.design.pattern.demo.flyweight;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.adam.app.design.pattern.demo.R;
 import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.databinding.ActivityDemoFlyweightStartBinding;
 import com.adam.app.design.pattern.demo.flyweight.chess.ChessPieceFactory;
@@ -32,6 +34,13 @@ public class DemoFlyweightStart extends AppCompatActivity {
         // view binding
         mBinding = ActivityDemoFlyweightStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
+
+        // build spinner adapter
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.piece_colors, R.layout.spinner_item_black);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // set adapter to spinner
+        mBinding.spinnerColor.setAdapter(adapter);
+
 
         mChessBoardView = mBinding.chessBoard;
 
