@@ -8,9 +8,11 @@ package com.adam.app.design.pattern.demo.bridge;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.adam.app.design.pattern.demo.R;
 import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.bridge.abstraction.RemoteControl;
 import com.adam.app.design.pattern.demo.bridge.implementor.IDevice;
@@ -41,6 +43,13 @@ public class DemoBridgeStart extends AppCompatActivity {
         // view binding
         mBinding = ActivityDemoBridgeStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
+
+        // build spinner adapter
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.bridge_devices, R.layout.spinner_item_black);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // set adapter to spinner
+        mBinding.spinnerDevice.setAdapter(adapter);
+
 
         // set spinner item selected listener
         mBinding.spinnerDevice.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
