@@ -56,7 +56,7 @@ public class DemoCompositeStart extends AppCompatActivity {
         root.add(resFolder);
 
         // result
-        mBinding.txtResult.setText(root.display(""));
+        mBinding.scrollResult.setText(root.display(""));
 
     }
 }
