@@ -10,6 +10,7 @@ package com.adam.app.design.pattern.demo.factory;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,8 +31,12 @@ public class DemoFactoryStart extends AppCompatActivity {
         // view binding
         mBinding = ActivityDemoFactoryStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
-        // set title
-        setTitle(R.string.title_activity_demo_factory_main);
+
+        // build spinner adapter
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.character_types, R.layout.spinner_item_black);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // set adapter to spinner
+        mBinding.spinnerType.setAdapter(adapter);
 
         // set create button listener
         mBinding.btnCreate.setOnClickListener(v -> {
