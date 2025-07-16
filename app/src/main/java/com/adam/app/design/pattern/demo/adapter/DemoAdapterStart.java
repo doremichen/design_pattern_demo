@@ -2,10 +2,12 @@ package com.adam.app.design.pattern.demo.adapter;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.adam.app.design.pattern.demo.MainActivity;
+import com.adam.app.design.pattern.demo.R;
 import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.adapter.player.AudioPlayerAdapter;
 import com.adam.app.design.pattern.demo.databinding.ActivityDemoAdapterStartBinding;
@@ -22,6 +24,14 @@ public class DemoAdapterStart extends AppCompatActivity {
         // view binding
         mBinding = ActivityDemoAdapterStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
+
+        // set media type spinner
+        // build spinner adapter
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.media_formats, R.layout.spinner_item_black);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // set adapter to spinner
+        mBinding.spinnerFormat.setAdapter(adapter);
+
         // set play button click listener
         mBinding.btnPlay.setOnClickListener(v -> {
                 // get media type
