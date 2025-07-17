@@ -9,16 +9,35 @@
     android:fitsSystemWindows="true"
     tools:context=".proxy.DemoProxyStart">
 
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/title_demo_proxy"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
     <!-- Instruction Scrollable Text -->
     <ScrollView
         android:id="@+id/scroll_instruction"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:fillViewport="true"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
         app:layout_constraintBottom_toTopOf="@id/btn_play"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -32,7 +51,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/demo_proxy_description"
-                android:textSize="16sp"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 android:lineSpacingExtra="4dp"
                 android:padding="8dp"
                 android:textColor="@android:color/black"/>
@@ -44,19 +64,21 @@
     <!-- Action Button -->
     <Button
         android:id="@+id/btn_play"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_demo_proxy_start_demo"
         app:layout_constraintTop_toBottomOf="@id/scroll_instruction"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
 
     <!-- Result -->
     <TextView
         android:id="@+id/txt_result"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:padding="12dp"
@@ -66,17 +88,20 @@
         app:layout_constraintBottom_toTopOf="@id/btn_back_to_main"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp" />
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
 
     <!-- Back to Main -->
     <Button
         android:id="@+id/btn_back_to_main"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_back_to_main_list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
