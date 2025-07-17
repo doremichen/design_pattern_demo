@@ -28,11 +28,9 @@ public class DemoTemplateStart extends AppCompatActivity {
         // view binding
         mBinding = ActivityDemoTemplateStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
-        // build spinner array adapter
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.exporter_types, android.R.layout.simple_spinner_item);
+        // build spinner adapter
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.exporter_types, R.layout.spinner_item_black);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mBinding.spinnerExporter.setAdapter(adapter);
         // set adapter to spinner
         mBinding.spinnerExporter.setAdapter(adapter);
 
