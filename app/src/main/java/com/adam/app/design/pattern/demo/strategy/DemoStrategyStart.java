@@ -7,11 +7,13 @@ package com.adam.app.design.pattern.demo.strategy;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.adam.app.design.pattern.demo.MainActivity;
 import com.adam.app.design.pattern.demo.R;
+import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.databinding.ActivityDemoStrategyStartBinding;
 import com.adam.app.design.pattern.demo.strategy.discount.ClearanceDiscountStrategy;
 import com.adam.app.design.pattern.demo.strategy.discount.IDiscountStrategy;
@@ -41,8 +43,19 @@ public class DemoStrategyStart extends AppCompatActivity {
         mStrategyMap.put(getString(R.string.label_clearance_discount), new ClearanceDiscountStrategy());
         mStrategyMap.put(getString(R.string.label_seasonal_discount), new SeasonalDiscountStrategy());
 
+        // build spinner adapter
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.strategy_types, R.layout.spinner_item_black);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // set adapter to spinner
+        mBinding.spinnerStrategy.setAdapter(adapter);
+
+
         // set calculate button click listener
         mBinding.btnCalculate.setOnClickListener(v -> {
+
+            // hide soft keyboard
+            Util.hideSoftKeyboard(this, v);
+
             // get price from edit text
             double price = Double.parseDouble(mBinding.edtPrice.getText().toString());
             // get strategy from spinner
