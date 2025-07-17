@@ -6,6 +6,7 @@
 package com.adam.app.design.pattern.demo.visitor;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,6 +35,12 @@ public class DemoVisitorStart extends AppCompatActivity {
         // view binding
         mBinding = ActivityDemoVisitorStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
+
+        // build spinner adapter
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.visitor_type_options, R.layout.spinner_item_black);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // set adapter to spinner
+        mBinding.spinnerVisitorType.setAdapter(adapter);
 
         // set run button click listener
         mBinding.btnRun.setOnClickListener(v -> {
