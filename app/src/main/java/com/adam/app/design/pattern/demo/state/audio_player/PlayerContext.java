@@ -7,6 +7,8 @@ package com.adam.app.design.pattern.demo.state.audio_player;
 
 import android.content.Context;
 
+import com.adam.app.design.pattern.demo.R;
+
 public class PlayerContext {
     // current state
     private PlayerState mCurrentState;
@@ -46,6 +48,10 @@ public class PlayerContext {
     public String pause(Context context) {
         // set last state
         String lastState = mCurrentState.toString();
+        // Can not change state to paused if current state is stopped
+        if (mCurrentState == PlayerState.STOPPED) {
+            return context.getString(R.string.demo_state_already_stopped_can_t_pause);
+        }
         // change state to paused
         mCurrentState = PlayerState.PAUSED;
         return mCurrentState.handle(context, lastState);

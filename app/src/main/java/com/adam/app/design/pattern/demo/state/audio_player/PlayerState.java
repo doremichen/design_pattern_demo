@@ -71,12 +71,6 @@ public enum PlayerState {
                 return context.getString(R.string.demo_state_pausing_music);
             }
 
-            // from stop to pause
-            if (lastState.equals(STOPPED_NAME)) {
-                return context.getString(R.string.demo_state_already_stopped_can_t_pause);
-            }
-
-
             return context.getString(R.string.demo_state_already_paused);
         }
 
