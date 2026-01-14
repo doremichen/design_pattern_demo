@@ -359,6 +359,8 @@
     <string name="demo_factory_type_archer">archer</string>
     <string name="demo_flyweight_color_black">Black</string>
     <string name="demo_flyweight_color_white">White</string>
+    <string name="demo_proxy_label_use_proxy">User Proxy</string>
+    <string name="demo_proxy_btn_clear_log">Clear log</string>
     <string-array name="character_types">
         <item>@string/demo_factory_type_hero</item>
         <item>@string/demo_factory_type_mage</item>

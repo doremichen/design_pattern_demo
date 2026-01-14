@@ -9,49 +9,55 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.adam.app.design.pattern.demo.MainActivity;
-import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.databinding.ActivityDemoProxyStartBinding;
-import com.adam.app.design.pattern.demo.proxy.model.IGamePlayer;
-import com.adam.app.design.pattern.demo.proxy.model.ProxyPlayer;
+import com.adam.app.design.pattern.demo.proxy.adapter.LogAdapter;
+import com.adam.app.design.pattern.demo.proxy.util.Event;
+import com.adam.app.design.pattern.demo.proxy.view_model.ProxyDemoViewModel;
 
 public class DemoProxyStart extends AppCompatActivity {
-
-    // view binding
-    private ActivityDemoProxyStartBinding mBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // view binding
-        mBinding = ActivityDemoProxyStartBinding.inflate(getLayoutInflater());
-        setContentView(mBinding.getRoot());
+        ActivityDemoProxyStartBinding viewBinding = ActivityDemoProxyStartBinding.inflate(getLayoutInflater());
+        setContentView(viewBinding.getRoot());
+        // view model
+        ProxyDemoViewModel vm = new ViewModelProvider(this).get(ProxyDemoViewModel.class);
 
-        // set start button listener
-        mBinding.btnPlay.setOnClickListener(v -> {
-            // start demo
-            startDemo();
-        });
+        // recycler view
+        viewBinding.recyclerLogs.setLayoutManager(new LinearLayoutManager(this));
+        viewBinding.recyclerLogs.setAdapter(new LogAdapter());
+        // data binding
+        viewBinding.setVm(vm);
+        viewBinding.setLifecycleOwner(this);
 
-        // set back to main button listener
-        mBinding.btnBackToMain.setOnClickListener(v -> {
-            // back to main
-            Intent intent = new Intent(DemoProxyStart.this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        // observer
+        vm.getNavigateEvent().observe(this, this::handleNavigateEvent);
+
+
+    }
+
+    private void handleNavigateEvent(ProxyDemoViewModel.NavigateEvent navigateEvent) {
+        if (navigateEvent == ProxyDemoViewModel.NavigateEvent.BACK_TO_MENU) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(intent);
-
-        });
-
+        }
     }
 
-    private void startDemo() {
-        //start demo
-        IGamePlayer player = new ProxyPlayer("Adam");
-        player.play();
-        mBinding.txtResult.setText(Util.logMessage());
-        // clear log
-        Util.clearLog();
-
+    private void handleNavigateEvent(Event<ProxyDemoViewModel.NavigateEvent> event) {
+        ProxyDemoViewModel.NavigateEvent ev = event != null ? event.getContentIfNotHandled() : null;
+        if (ev == ProxyDemoViewModel.NavigateEvent.BACK_TO_MENU) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
+        }
     }
+
+
 }

@@ -82,6 +82,8 @@
 <string name="btn_demo_proxy_start_demo">開始示範</string>
 <string name="demo_proxy_result_init_info">結果日誌將顯示於此…</string>
 <string name="demo_proxy_instruction">代理模式（Proxy Pattern）為其他物件提供一種代理以控制對它的訪問。\n\n本示範中，代理會延遲建立實際影片播放器並記錄存取。</string>
+<string name="demo_proxy_label_use_proxy">使用代理者</string>
+<string name="demo_proxy_btn_clear_log">清理日誌</string>
 
 <string name="btn_demo_prototype_clone_character">複製角色</string>
 <string name="demo_prototype_instruction">原型模式（Prototype Pattern）允許透過複製現有物件來建立新物件，而非從頭建立。\n\n這對於建立成本高或需避免與具體類別耦合的場景特別有用。\n\n主要好處：\n- 避免建立新物件的開銷\n- 簡化初始化邏輯\n- 適合用於物件註冊表、GUI 編輯器等情境\n\n本示範將展示如何使用 clone() 方法從一個角色樣板複製並自訂，而不影響原始物件。</string>
@@ -356,7 +358,7 @@
 <string name="demo_factory_type_archer">弓箭手</string>
 <string name="demo_flyweight_color_black">黑色</string>
 <string name="demo_flyweight_color_white">白色</string>
-<string-array name="character_types">
+    <string-array name="character_types">
     <item>@string/demo_factory_type_hero</item>
     <item>@string/demo_factory_type_mage</item>
     <item>@string/demo_factory_type_archer</item>

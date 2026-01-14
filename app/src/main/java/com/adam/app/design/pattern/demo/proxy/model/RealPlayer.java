@@ -1,23 +1,27 @@
 /**
- * Description: This class is real player
- * Author: Adam Chen
- * Date: 2025/07/04
+ * File: RealPlayer.java
+ * Description: This class is the Real Player class
+ *
+ * @author Adam Chen
+ * @version 1.0 - 2026-01-13
  */
 package com.adam.app.design.pattern.demo.proxy.model;
 
-import com.adam.app.design.pattern.demo.Util;
+public class RealPlayer extends IGamePlayer {
+    // TAG
+    private static final String TAG = "RealPlayer";
 
-public class RealPlayer extends IGamePlayer{
-
-    // constructor
     public RealPlayer(String name) {
-        // log
-        Util.log("RealPlayer: " + name);
+        super(name);
     }
 
     @Override
-    public void play() {
-        // log
-        Util.log("RealPlayer: play");
+    public void play(LogSink sink) {
+        sink.add(TAG + ": playing " + mName);
+        sink.add(TAG + ": loading assets...");
+        AssetLoader.loadHeavyAssets(sink);
+        sink.add("RealPlayer: initializing gameplay...");
+        AssetLoader.delay(400L);
+        sink.add("RealPlayer: done.");
     }
 }
