@@ -76,7 +76,13 @@
     <string name="btn_demo_proxy_start_demo">Start Demo</string>
     <string name="demo_proxy_result_init_info">Result log will show here...</string>
     <string name="demo_proxy_instruction">Proxy Pattern provides a surrogate or placeholder for another object to control access to it. \nIn this demo, the proxy delays creation of the real video player and logs the access.</string>
-    <string name="btn_demo_prototype_clone_character">Clone Character</string>
+    <string name="demo_prototype_character_name">Name: %1$s</string>
+    <string name="demo_prototype_character_level">Level: %1$d</string>
+    <string name="demo_prototype_character_proto_id">ID of prototype: %1$s</string>
+    <string name="demo_prototype_character_proto_hash_code">Hash code of prototype: %1$d</string>
+    <string name="demo_prototype_clone_character_btn">Clone Character</string>
+    <string name="demo_prototype_original_character_title">Original Prototype</string>
+    <string name="demo_prototype_cloned_instance_new_object">Cloned Instance (New Object)</string>
     <string name="demo_prototype_instruction">
         "Prototype Pattern allows objects to be cloned instead of created from scratch. This is useful when object creation is expensive, or you want to avoid dependencies on concrete classes.\n"
         "\n"

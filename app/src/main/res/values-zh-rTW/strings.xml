@@ -85,8 +85,15 @@
 <string name="demo_proxy_label_use_proxy">使用代理者</string>
 <string name="demo_proxy_btn_clear_log">清理日誌</string>
 
-<string name="btn_demo_prototype_clone_character">複製角色</string>
+<string name="demo_prototype_clone_character_btn">複製角色</string>
 <string name="demo_prototype_instruction">原型模式（Prototype Pattern）允許透過複製現有物件來建立新物件，而非從頭建立。\n\n這對於建立成本高或需避免與具體類別耦合的場景特別有用。\n\n主要好處：\n- 避免建立新物件的開銷\n- 簡化初始化邏輯\n- 適合用於物件註冊表、GUI 編輯器等情境\n\n本示範將展示如何使用 clone() 方法從一個角色樣板複製並自訂，而不影響原始物件。</string>
+<string name="demo_prototype_character_name">名稱: %1$s</string>
+<string name="demo_prototype_character_level">等級: %1$d</string>
+<string name="demo_prototype_character_proto_id">編號: %1$s</string>
+<string name="demo_prototype_character_proto_hash_code">哈希碼: %1$d</string>
+<string name="demo_prototype_original_character_title">原始原型</string>
+<string name="demo_prototype_cloned_instance_new_object">克隆實例（新物件）</string>
+
 <string name="demo_mediator_hint_type_a_message">輸入訊息</string>
 <string name="btn_demo_mediator_send">送出</string>
 <string name="demo_mediator_hint_enter_your_name">請輸入您的名稱</string>

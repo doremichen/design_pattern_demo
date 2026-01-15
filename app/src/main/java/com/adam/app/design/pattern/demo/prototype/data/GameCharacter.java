@@ -52,6 +52,30 @@ public class GameCharacter implements Cloneable {
         mLevel = level;
     }
 
+    // --- getter ---
+    // get name
+    public String getName() {
+        return mName;
+    }
+    // get type
+    public String getType() {
+        return mType;
+    }
+    // get level
+    public int getLevel() {
+        return mLevel;
+    }
+    // get prototype ID
+    public String getPrototypeId() {
+        return mPrototypeId;
+    }
+
+    // get hash code
+    public int getHashCode() {
+        return System.identityHashCode(this);
+    }
+
+
     // toString
     @NonNull
     @Override

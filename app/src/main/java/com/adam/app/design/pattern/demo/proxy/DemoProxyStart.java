@@ -13,9 +13,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.adam.app.design.pattern.demo.MainActivity;
+import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.databinding.ActivityDemoProxyStartBinding;
 import com.adam.app.design.pattern.demo.proxy.adapter.LogAdapter;
-import com.adam.app.design.pattern.demo.proxy.util.Event;
 import com.adam.app.design.pattern.demo.proxy.view_model.ProxyDemoViewModel;
 
 public class DemoProxyStart extends AppCompatActivity {
@@ -42,17 +42,10 @@ public class DemoProxyStart extends AppCompatActivity {
 
     }
 
-    private void handleNavigateEvent(ProxyDemoViewModel.NavigateEvent navigateEvent) {
-        if (navigateEvent == ProxyDemoViewModel.NavigateEvent.BACK_TO_MENU) {
-            Intent intent = new Intent(this, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-            startActivity(intent);
-        }
-    }
 
-    private void handleNavigateEvent(Event<ProxyDemoViewModel.NavigateEvent> event) {
-        ProxyDemoViewModel.NavigateEvent ev = event != null ? event.getContentIfNotHandled() : null;
-        if (ev == ProxyDemoViewModel.NavigateEvent.BACK_TO_MENU) {
+    private void handleNavigateEvent(Util.Event<Util.NavigateEvent> event) {
+        Util.NavigateEvent ev = event != null ? event.getContentIfNotHandled() : null;
+        if (ev == Util.NavigateEvent.BACK_TO_MENU) {
             Intent intent = new Intent(this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(intent);

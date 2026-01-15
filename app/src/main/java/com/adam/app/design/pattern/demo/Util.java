@@ -103,4 +103,20 @@ public final class Util {
 
     }
 
+    public enum NavigateEvent {
+        NONE,
+        BACK_TO_MENU;
+    }
+
+    public static class Event<T> {
+        private final T content;
+        private boolean handled = false;
+        public Event(T content) { this.content = content; }
+        public T getContentIfNotHandled() {
+            if (handled) return null;
+            handled = true;
+            return content;
+        }
+        public T peek() { return content; }
+    }
 }

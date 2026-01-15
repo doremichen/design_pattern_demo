@@ -17,7 +17,6 @@ import androidx.lifecycle.MutableLiveData;
 import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.proxy.model.IGamePlayer;
 import com.adam.app.design.pattern.demo.proxy.model.PlayerFactory;
-import com.adam.app.design.pattern.demo.proxy.util.Event;
 import com.adam.app.design.pattern.demo.proxy.util.ThreadUtils;
 
 import java.util.ArrayList;
@@ -35,7 +34,7 @@ public class ProxyDemoViewModel extends AndroidViewModel {
     private final MutableLiveData<Boolean> mLoading = new MutableLiveData<>(false);
     private final MutableLiveData<String> mStatusText = new MutableLiveData<>("Ready");
     private final MutableLiveData<List<String>> mLogs = new MutableLiveData<>(new ArrayList<>());
-    private final MutableLiveData<Event<NavigateEvent>> mNavigateEvent = new MutableLiveData<>(new Event<>(NavigateEvent.UNKONW));
+    private final MutableLiveData<Util.Event<Util.NavigateEvent>> mNavigateEvent = new MutableLiveData<>(new Util.Event<>(Util.NavigateEvent.NONE));
     public ProxyDemoViewModel(@NonNull Application application) {
         super(application);
 
@@ -56,7 +55,7 @@ public class ProxyDemoViewModel extends AndroidViewModel {
         return mLogs;
     }
 
-    public LiveData<Event<NavigateEvent>> getNavigateEvent() {
+    public LiveData<Util.Event<Util.NavigateEvent>> getNavigateEvent() {
         return mNavigateEvent;
     }
 
@@ -93,7 +92,7 @@ public class ProxyDemoViewModel extends AndroidViewModel {
     public void onBackMainClicked() {
         // back to main
         //mNavigateEvent.setValue(NavigateEvent.BACK_TO_MENU);
-        mNavigateEvent.setValue(new Event<>(NavigateEvent.BACK_TO_MENU));
+        mNavigateEvent.setValue(new Util.Event<>(Util.NavigateEvent.BACK_TO_MENU));
     }
 
 
@@ -142,11 +141,6 @@ public class ProxyDemoViewModel extends AndroidViewModel {
             mBuffer.add(msg);
             mLogs.postValue(new ArrayList<>(mBuffer));
         }
-    }
-
-    public enum NavigateEvent {
-        UNKONW,
-        BACK_TO_MENU;
     }
 
 }
