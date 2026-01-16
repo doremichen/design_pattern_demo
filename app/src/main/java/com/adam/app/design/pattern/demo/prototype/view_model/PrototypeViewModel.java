@@ -14,10 +14,12 @@ import androidx.lifecycle.ViewModel;
 import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.prototype.data.GameCharacter;
 
+import java.util.Random;
+
 public class PrototypeViewModel extends ViewModel {
     // live data: origCharacter, cloneCharacter
-    private MutableLiveData<GameCharacter> origCharacter = new MutableLiveData<>();
-    private MutableLiveData<GameCharacter> cloneCharacter = new MutableLiveData<>();
+    private final MutableLiveData<GameCharacter> origCharacter = new MutableLiveData<>();
+    private final MutableLiveData<GameCharacter> cloneCharacter = new MutableLiveData<>();
 
     // navigate event
     private final MutableLiveData<Util.Event<Util.NavigateEvent>> mNavigateEvent = new MutableLiveData<>(new Util.Event<>(Util.NavigateEvent.NONE));
@@ -49,9 +51,13 @@ public class PrototypeViewModel extends ViewModel {
         if (base == null) {
             return;
         }
+        // random
+        Random random = new Random();
+        int randomInt = random.nextInt(10);
+
         GameCharacter clone = base.clone();
-        clone.setName(base.getName() + ": \" (已強化)\"");
-        clone.setLevel(base.getLevel() + 5);
+        clone.setName(base.getName() + ": \" (Clone)\"");
+        clone.setLevel(base.getLevel() + randomInt);
         clone.setType("Clone Warrior");
         cloneCharacter.setValue(clone);
     }
