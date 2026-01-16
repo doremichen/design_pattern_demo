@@ -165,6 +165,8 @@
 <string name="demo_decorator_chb_add_vanilla">加香草</string>
 <string name="demo_decorator_btn_make_coffee">製作咖啡</string>
 <string name="demo_decorator_coffee_info_result">咖啡資訊：%1$s\n總金額：$%2$.2f</string>
+<string name="demo_decorator_receipt">收據</string>
+<string name="demo_decorator_total_amount">總金額</string>
 
 <string name="strategy_description">
     策略模式（Strategy Pattern）讓你可以定義一系列的演算法，將它們封裝起來並使它們可以互相替換。\n

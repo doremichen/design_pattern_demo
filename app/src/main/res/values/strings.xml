@@ -160,6 +160,8 @@
     <string name="demo_decorator_chb_add_vanilla">Add Vanilla</string>
     <string name="demo_decorator_btn_make_coffee">Make Coffee</string>
     <string name="demo_decorator_coffee_info_result">Coffee info: %1$s\nTotal cost: $%2$.2f</string>
+    <string name="demo_decorator_receipt">RECEIPT</string>
+    <string name="demo_decorator_total_amount">Total Amount</string>
     <string name="strategy_description">"Strategy Pattern lets you define a family of algorithms, encapsulate each one and make them interchangeable.\n"
         "Strategy lets the algorithm vary independently from clients that use it.\n\n"
         "In this demo, you can choose different discount strategies for a given price:\n"

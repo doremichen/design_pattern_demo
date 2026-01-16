@@ -8,71 +8,42 @@ package com.adam.app.design.pattern.demo.decorator;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.adam.app.design.pattern.demo.MainActivity;
-import com.adam.app.design.pattern.demo.R;
+import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.databinding.ActivityDemoDecoratorStartBinding;
-import com.adam.app.design.pattern.demo.decorator.coffee.ICoffee;
-import com.adam.app.design.pattern.demo.decorator.coffee.MilkDecorator;
-import com.adam.app.design.pattern.demo.decorator.coffee.SimpleCoffee;
-import com.adam.app.design.pattern.demo.decorator.coffee.SugarDecorator;
-import com.adam.app.design.pattern.demo.decorator.coffee.VanillaDecorator;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.adam.app.design.pattern.demo.decorator.viewmodel.DecoratorViewModel;
 
 public class DemoDecoratorStart extends AppCompatActivity {
-
-    // view binding
-    private ActivityDemoDecoratorStartBinding mBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // view binding
-        mBinding = ActivityDemoDecoratorStartBinding.inflate(getLayoutInflater());
-        setContentView(mBinding.getRoot());
+        ActivityDemoDecoratorStartBinding viewBinding = ActivityDemoDecoratorStartBinding.inflate(getLayoutInflater());
+        setContentView(viewBinding.getRoot());
+        // init view model
+        DecoratorViewModel viewModel = new ViewModelProvider(this).get(DecoratorViewModel.class);
+        // data binding to view
+        viewBinding.setVm(viewModel);
+        viewBinding.setLifecycleOwner(this);
 
-        // set make coffee button listener
-        mBinding.btnMakeCoffee.setOnClickListener(v -> makeCoffee());
+        // observer
+        viewModel.getNavigateEvent().observe(this, this::onNavigateEvent);
 
-        // set back to main list button listener
-        mBinding.btnBackToMainList.setOnClickListener(v -> {
+
+    }
+
+    private void onNavigateEvent(Util.Event<Util.NavigateEvent> event) {
+        Util.NavigateEvent ev = event != null ? event.getContentIfNotHandled() : null;
+        if (ev == Util.NavigateEvent.BACK_TO_MENU) {
             Intent intent = new Intent(this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(intent);
-        });
-
-
+        }
     }
 
-    /**
-     * make coffee by checkbox item
-     */
-    private void makeCoffee() {
-        // simple coffee
-        ICoffee coffee = new SimpleCoffee();
-        // add milk
-        if (mBinding.checkboxMilk.isChecked()) {
-            coffee = new MilkDecorator(coffee);
-        }
-        // add sugar
-        if (mBinding.checkboxSugar.isChecked()) {
-            coffee = new SugarDecorator(coffee);
-        }
-        // add vanilla
-        if (mBinding.checkboxVanilla.isChecked()) {
-            coffee = new VanillaDecorator(coffee);
-        }
-
-        // show result
-        mBinding.txtResult.setText(this.getString(R.string.demo_decorator_coffee_info_result, coffee.getDescription(this), coffee.getCost()));
-
-    }
 
 }
