@@ -8,7 +8,7 @@ package com.adam.app.design.pattern.demo.mediator.user;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChatRoom implements ChatMediator {
+public class ChatRoom implements IChatMediator {
     private final List<User> mUsers;
     public ChatRoom() {
         this.mUsers = new ArrayList<>();

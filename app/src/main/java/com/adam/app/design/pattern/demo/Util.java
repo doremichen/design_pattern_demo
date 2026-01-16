@@ -55,6 +55,15 @@ public final class Util {
     }
 
     /**
+     * Log error message.
+     * @param msg Message to log.
+     */
+    public static void errorDebug(String msg) {
+        Log.e(TAG, msg);
+    }
+
+
+    /**
      * Toast message.
      * @param context Context.
      * @param msg Message to toast.

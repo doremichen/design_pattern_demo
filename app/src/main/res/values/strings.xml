@@ -94,7 +94,7 @@
         "In this demo, you'll see how to clone an existing character template using the `clone()` method and customize it without affecting the original.\n"
     </string>
     <string name="demo_mediator_hint_type_a_message">Type a message</string>
-    <string name="btn_demo_mediator_send">Send</string>
+    <string name="demo_mediator_send_btn">Send</string>
     <string name="demo_mediator_hint_enter_your_name">Enter your name</string>
     <string name="demo_mediator_hint_enter_your_message">Enter your message</string>
     <string name="demo_mediator_instruction">
@@ -107,6 +107,8 @@
     <string name="toast_please_enter_your_name_and_message">Please enter your name and message</string>
     <string name="demo_mediator_receive_message">" receive message: "</string>
     <string name="demo_mediator_from">" from "</string>
+    <string name="demo_mediator_chatroom_sender_input_title">Send a message to the intermediary (ChatRoom)</string>
+    <string name="demo_mediator_system_logs">System Logs (Intermediary Distribution Records)</string>
     <string name="demo_command_instruction">
         "This demo showcases the Command Pattern using a simple light switch.\n"
         "The toggle switch represents a command trigger, allowing the user to turn a light ON or OFF.\n"

@@ -5,7 +5,7 @@
         <import type="android.view.View" />
         <variable
             name="vm"
-            type="com.adam.app.design.pattern.demo.prototype.view_model.PrototypeViewModel" />
+            type="com.adam.app.design.pattern.demo.prototype.viewmodel.PrototypeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -95,7 +95,7 @@
 <string name="demo_prototype_cloned_instance_new_object">克隆實例（新物件）</string>
 
 <string name="demo_mediator_hint_type_a_message">輸入訊息</string>
-<string name="btn_demo_mediator_send">送出</string>
+<string name="demo_mediator_send_btn">送出</string>
 <string name="demo_mediator_hint_enter_your_name">請輸入您的名稱</string>
 <string name="demo_mediator_hint_enter_your_message">請輸入您的訊息</string>
 <string name="demo_mediator_instruction">
@@ -108,7 +108,8 @@
 <string name="toast_please_enter_your_name_and_message">請輸入您的名稱與訊息</string>
 <string name="demo_mediator_receive_message"> 收到訊息：</string>
 <string name="demo_mediator_from"> 來自 </string>
-
+<string name="demo_mediator_chatroom_sender_input_title">發送訊息至中介者 (ChatRoom)</string>
+<string name="demo_mediator_system_logs">中介者分發記錄 (System Logs):</string>
 <string name="demo_command_instruction">
     本示範透過簡單的電燈開關來展示命令模式（Command Pattern）。\n
     切換開關代表發出一個命令，讓使用者可以開啟或關閉電燈。\n

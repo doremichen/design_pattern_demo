@@ -4,7 +4,7 @@ import com.adam.app.design.pattern.demo.Util;
 
 public class ConcreteUser extends User {
 
-    public ConcreteUser(ChatMediator mediator, String name) {
+    public ConcreteUser(IChatMediator mediator, String name) {
         super(mediator, name);
     }
 

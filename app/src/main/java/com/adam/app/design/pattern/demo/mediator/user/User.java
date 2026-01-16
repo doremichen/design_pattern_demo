@@ -7,7 +7,7 @@ package com.adam.app.design.pattern.demo.mediator.user;
 
 public abstract class User {
     // chat mediator
-    protected ChatMediator mMediator;
+    protected IChatMediator mMediator;
     // name
     protected String mName;
 
@@ -27,7 +27,7 @@ public abstract class User {
     }
 
     // construct
-    public User(ChatMediator mediator, String name) {
+    public User(IChatMediator mediator, String name) {
         this.mMediator = mediator;
         this.mName = name;
     }

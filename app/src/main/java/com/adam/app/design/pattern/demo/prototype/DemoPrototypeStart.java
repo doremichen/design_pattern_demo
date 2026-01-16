@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.adam.app.design.pattern.demo.MainActivity;
 import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.databinding.ActivityDemoPrototypeStartBinding;
-import com.adam.app.design.pattern.demo.prototype.view_model.PrototypeViewModel;
+import com.adam.app.design.pattern.demo.prototype.viewmodel.PrototypeViewModel;
 
 public class DemoPrototypeStart extends AppCompatActivity {
 
