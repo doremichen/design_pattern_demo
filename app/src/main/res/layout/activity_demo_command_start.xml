@@ -1,75 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="24dp"
-    android:fitsSystemWindows="true"
-    tools:context=".command.DemoCommandStart">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Title -->
-    <TextView
-        android:id="@+id/txt_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/title_demo_command"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="vm"
+            type="com.adam.app.design.pattern.demo.command.viewmodel.CommandViewModel" />
+    </data>
 
-    <!-- Light Switch -->
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/switch_light"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/demo_command_light_switch"
-        android:textSize="16sp"
-        android:textColor="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@id/txt_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background='@{vm.isLightOn ? @color/light_yellow_bg : @color/dark_grey_bg}'
+        android:fitsSystemWindows="true">
 
-    <!-- Log Area -->
-    <TextView
-        android:id="@+id/scroll_log"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:background="@color/grey_background"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/switch_light"
-        app:layout_constraintBottom_toTopOf="@id/btn_back_to_main_list"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/title_demo_command"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor='@{vm.isLightOn ? @color/black : @color/white}'
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_bulb"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_title"
+            app:layout_constraintBottom_toTopOf="@id/switch_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Back Button -->
-    <Button
-        android:id="@+id/btn_back_to_main_list"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/btn_back_to_main_list"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="40dp"
+                android:src='@{vm.isLightOn ? @drawable/ic_bulb_on : @drawable/ic_bulb_off}'
+                app:tint='@{vm.isLightOn ? @color/amber_500 : @color/grey_500}' />
+        </com.google.android.material.card.MaterialCardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:checked="@{vm.isLightOn}"
+            android:onCheckedChanged='@{(button, checked) -> vm.onLightSwitchChanged(checked)}'
+            android:text="@string/demo_command_light_switch"
+            android:textSize="18sp"
+            android:textColor='@{vm.isLightOn ? @color/black : @color/white}'
+            app:layout_constraintBottom_toTopOf="@id/status_panel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/status_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/shape_log_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_back">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/demo_command_command_executor_status"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:text="@{vm.statusLog}"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="24dp"
+            android:text="@string/btn_back_to_main_list"
+            android:onClick="@{() -> vm.onBackMainClicked()}"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -10,4 +10,8 @@
     <color name="chessboard_background_gray">#CCCCCC</color>
     <color name="my_app_background">#C8E6C9</color>
     <color name="grey_background">#E0E0E0</color>
+    <color name="light_yellow_bg">#FFFDE7</color>
+    <color name="dark_grey_bg">#212121</color>
+    <color name="amber_500">#FFC107</color>
+    <color name="grey_500">#9E9E9E</color>
 </resources>

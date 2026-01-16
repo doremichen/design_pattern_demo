@@ -366,6 +366,7 @@
 <string name="demo_factory_type_archer">弓箭手</string>
 <string name="demo_flyweight_color_black">黑色</string>
 <string name="demo_flyweight_color_white">白色</string>
+    <string name="demo_command_command_executor_status">命令執行器狀態:</string>
     <string-array name="character_types">
     <item>@string/demo_factory_type_hero</item>
     <item>@string/demo_factory_type_mage</item>
