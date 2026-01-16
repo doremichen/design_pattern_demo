@@ -5,14 +5,14 @@
     -->
     <data titleRes="title_demo_singleton" clsname="com.adam.app.design.pattern.demo.singleton.DemoSingletonMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_factory" clsname="com.adam.app.design.pattern.demo.factory.DemoFactoryMain" pkgname="com.adam.app.design.pattern.demo"/>
-    <data titleRes="title_demo_abstract_factory" clsname="com.adam.app.design.pattern.demo.abstract_factory.DemoAbstractFactoryMain" pkgname="com.adam.app.design.pattern.demo"/>
+    <data titleRes="title_demo_abstract_factory" clsname="com.adam.app.design.pattern.demo.abstractfactory.DemoAbstractFactoryMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_template" clsname="com.adam.app.design.pattern.demo.template.DemoTemplateMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_builder" clsname="com.adam.app.design.pattern.demo.builder.DemoBuilderMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_proxy" clsname="com.adam.app.design.pattern.demo.proxy.DemoProxyMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_prototype" clsname="com.adam.app.design.pattern.demo.prototype.DemoPrototypeMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_mediator" clsname="com.adam.app.design.pattern.demo.mediator.DemoMediatorMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_command" clsname="com.adam.app.design.pattern.demo.command.DemoCommandMain" pkgname="com.adam.app.design.pattern.demo"/>
-    <data titleRes="title_demo_chain_of_responsibility" clsname="com.adam.app.design.pattern.demo.chain_of_responsibility.DemoChainMain" pkgname="com.adam.app.design.pattern.demo"/>
+    <data titleRes="title_demo_chain_of_responsibility" clsname="com.adam.app.design.pattern.demo.chainofresponsibility.DemoChainMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_decorator" clsname="com.adam.app.design.pattern.demo.decorator.DemoDecoratorMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_strategy" clsname="com.adam.app.design.pattern.demo.strategy.DemoStrategyMain" pkgname="com.adam.app.design.pattern.demo"/>
     <data titleRes="title_demo_adapter" clsname="com.adam.app.design.pattern.demo.adapter.DemoAdapterMain" pkgname="com.adam.app.design.pattern.demo"/>

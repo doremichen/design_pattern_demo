@@ -1,66 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="24dp"
-    android:fitsSystemWindows="true"
-    tools:context=".chain_of_responsibility.DemoChainStart">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <EditText
-        android:id="@+id/edt_request_input"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:hint="@string/demo_chain_et_hint_enter_your_support_request"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black"
-        android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="vm"
+            type="com.adam.app.design.pattern.demo.chainofresponsibility.viewmodel.CoRViewModel" />
+    </data>
 
-    <Button
-        android:id="@+id/btn_send_request"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/demo_chain_btn_send_request"
-        app:layout_constraintTop_toBottomOf="@id/edt_request_input"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F2F5"
+        android:fitsSystemWindows="true">
 
-    <TextView
-        android:id="@+id/txt_result_log"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/grey_background"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/btn_send_request"
-        app:layout_constraintBottom_toTopOf="@id/btn_back_to_main"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btn_back_to_main"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/btn_back_to_main_list"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/shape_gradient_card_bg"
+                android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/demo_chain_support_ticket_system_title"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/demo_chain_input_request_hint"
+                    android:textColorHint="@color/dark_grey_bg"
+                    app:boxBackgroundColor="@color/amber_500">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@={vm.mRequestInput}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/demo_chain_btn_send_request"
+                    app:cornerRadius="8dp"
+                    android:onClick="@{(v) -> vm.onSendRequest(v.context)}"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/lbl_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/demo_chain_processing_status"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/card_input"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:strokeWidth="2dp"
+            app:handlerStrokeColor='@{vm.handlerLevel}'
+            app:layout_constraintTop_toBottomOf="@id/lbl_status"
+            app:layout_constraintBottom_toTopOf="@id/btn_back">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_gradient_card_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="4dp"
+                    android:background="@drawable/shape_log_bg"
+                    android:text='@{vm.handlerLevel == 1 ? "Handled by LOW Level" : (vm.handlerLevel == 2 ? "Handled by MID Level" : (vm.handlerLevel == 3 ? "Handled by HIGH Level" : "Waiting for Request"))}'
+                    android:textStyle="bold"
+                    app:textColor='@{vm.handlerLevel}'/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@{vm.resultMessage}"
+                    android:textSize="20sp"
+                    android:textColor="#263238" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/btn_back_to_main_list"
+            android:onClick="@{() -> vm.onBackMainClicked()}"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -121,6 +121,7 @@
     </string>
     <string name="demo_command_title_command_pattern_demo">Command Pattern Demo</string>
     <string name="demo_command_light_switch">Light Switch</string>
+    <string name="demo_command_command_executor_status">Command Executor Status:</string>
     <string name="demo_chain_instruction">"This demo illustrates the Chain of Responsibility Pattern.\n\n"
         "A support request is passed along a chain of handlers:\n"
         "- LowLevelSupport handles simple issues.\n"
@@ -139,6 +140,9 @@
     <string name="demo_chain_handled_by_mid_level_support">Handled by Mid-Level Support</string>
     <string name="demo_chain_handled_by_high_level_support">Handled by High-Level Support</string>
     <string name="demo_chain_unhandled_request">Unhandled request</string>
+    <string name="demo_chain_support_ticket_system_title">Support Ticket System</string>
+    <string name="demo_chain_input_request_hint">Describe your issue (e.g., \'crash\', \'login\')</string>
+    <string name="demo_chain_processing_status">Processing Status</string>
     <string name="demo_decorator_instruction">"This demo illustrates the Decorator Pattern.\n\n"
         "The Decorator Pattern allows you to dynamically add new behavior to objects without modifying their structure.\n\n"
         "We start with a basic Coffee object and wrap it with additional decorators like Milk, Sugar, and Vanilla.\n\n"
@@ -369,7 +373,6 @@
     <string name="demo_flyweight_color_white">White</string>
     <string name="demo_proxy_label_use_proxy">User Proxy</string>
     <string name="demo_proxy_btn_clear_log">Clear log</string>
-    <string name="demo_command_command_executor_status">Command Executor Status:</string>
     <string-array name="character_types">
         <item>@string/demo_factory_type_hero</item>
         <item>@string/demo_factory_type_mage</item>

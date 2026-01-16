@@ -14,4 +14,7 @@
     <color name="dark_grey_bg">#212121</color>
     <color name="amber_500">#FFC107</color>
     <color name="grey_500">#9E9E9E</color>
+    <color name="low_green">#4CAF50</color>
+    <color name="mid_orange">#FF9800</color>
+    <color name="high_red">#F44336</color>
 </resources>

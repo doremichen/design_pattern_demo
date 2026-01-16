@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="24dp"
     android:fitsSystemWindows="true"
-    tools:context=".abstract_factory.DemoAbstractFactoryStart">
+    tools:context=".abstractfactory.DemoAbstractFactoryStart">
 
     <TextView
         android:id="@+id/txt_title"

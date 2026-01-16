@@ -122,6 +122,7 @@
 </string>
 <string name="demo_command_title_command_pattern_demo">命令模式示範</string>
 <string name="demo_command_light_switch">電燈開關</string>
+<string name="demo_command_command_executor_status">命令執行器狀態:</string>
 
 <string name="demo_chain_instruction">
     本示範展示了責任鏈模式（Chain of Responsibility Pattern）。\n\n
@@ -142,6 +143,9 @@
 <string name="demo_chain_handled_by_mid_level_support">由中階支援處理</string>
 <string name="demo_chain_handled_by_high_level_support">由高階支援處理</string>
 <string name="demo_chain_unhandled_request">無法處理的請求</string>
+<string name="demo_chain_support_ticket_system_title">支援工單系統</string>
+<string name="demo_chain_input_request_hint">請描述您的問題(e.g., \'crash\', \'login\')</string>
+<string name="demo_chain_processing_status">處理狀態</string>
 
 <string name="demo_decorator_instruction">
     本示範展示了裝飾者模式（Decorator Pattern）。\n\n
@@ -366,7 +370,6 @@
 <string name="demo_factory_type_archer">弓箭手</string>
 <string name="demo_flyweight_color_black">黑色</string>
 <string name="demo_flyweight_color_white">白色</string>
-    <string name="demo_command_command_executor_status">命令執行器狀態:</string>
     <string-array name="character_types">
     <item>@string/demo_factory_type_hero</item>
     <item>@string/demo_factory_type_mage</item>

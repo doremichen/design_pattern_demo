@@ -1,9 +1,9 @@
 /**
- * Description: This class is the start activity of command pattern demo.
+ * Description: This class is used to define the demo chain start activity.
  * Author: Adam Chen
- * Date: 2025/07/04
+ * Date: 2025/07/08
  */
-package com.adam.app.design.pattern.demo.command;
+package com.adam.app.design.pattern.demo.chainofresponsibility;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,32 +13,42 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.adam.app.design.pattern.demo.MainActivity;
 import com.adam.app.design.pattern.demo.Util;
-import com.adam.app.design.pattern.demo.command.viewmodel.CommandViewModel;
-import com.adam.app.design.pattern.demo.databinding.ActivityDemoCommandStartBinding;
+import com.adam.app.design.pattern.demo.chainofresponsibility.viewmodel.CoRViewModel;
+import com.adam.app.design.pattern.demo.databinding.ActivityDemoChainStartBinding;
 
-public class DemoCommandStart extends AppCompatActivity {
-    // TAG
-    private static final String TAG = "DemoCommandStart";
+public class DemoChainStart extends AppCompatActivity {
 
     // view binding
-    private ActivityDemoCommandStartBinding mBinding;
+    private ActivityDemoChainStartBinding mBinding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Util.logDebug(TAG + ": onCreate");
-        mBinding = ActivityDemoCommandStartBinding.inflate(getLayoutInflater());
+        mBinding = ActivityDemoChainStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
         // init view model
-        CommandViewModel viewModel = new ViewModelProvider(this).get(CommandViewModel.class);
+        CoRViewModel viewModel = new ViewModelProvider(this).get(CoRViewModel.class);
+        // data binding to view
         mBinding.setVm(viewModel);
         mBinding.setLifecycleOwner(this);
 
         // observer
         viewModel.getNavigateEvent().observe(this, this::onNavigateEvent);
+        viewModel.getHideSoftKeyboard().observe(this, this::onHideSoftKeyboard);
+    }
 
+    private void onHideSoftKeyboard(Boolean shouldHide) {
+        if (shouldHide == null) {
+            return;
+        }
 
+        if (!shouldHide) {
+            return;
+        }
 
+        // hide soft keyboard
+        Util.hideSoftKeyboard(this, getCurrentFocus());
     }
 
     private void onNavigateEvent(Util.Event<Util.NavigateEvent> event) {
@@ -49,4 +59,5 @@ public class DemoCommandStart extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
 }

@@ -1,21 +1,17 @@
-package com.adam.app.design.pattern.demo.abstract_factory;
+package com.adam.app.design.pattern.demo.abstractfactory;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.adam.app.design.pattern.demo.MainActivity;
 import com.adam.app.design.pattern.demo.R;
 import com.adam.app.design.pattern.demo.Util;
-import com.adam.app.design.pattern.demo.abstract_factory.uicomponent.IButtonComponent;
-import com.adam.app.design.pattern.demo.abstract_factory.uicomponent.ITextComponent;
-import com.adam.app.design.pattern.demo.abstract_factory.uicomponent.IUIComponentFactory;
+import com.adam.app.design.pattern.demo.abstractfactory.uicomponent.IButtonComponent;
+import com.adam.app.design.pattern.demo.abstractfactory.uicomponent.ITextComponent;
+import com.adam.app.design.pattern.demo.abstractfactory.uicomponent.IUIComponentFactory;
 import com.adam.app.design.pattern.demo.databinding.ActivityDemoAbstractFactoryStartBinding;
 
 public class DemoAbstractFactoryStart extends AppCompatActivity {

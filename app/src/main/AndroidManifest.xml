@@ -91,10 +91,10 @@
             android:name=".decorator.DemoDecoratorMain"
             android:exported="false" />
         <activity
-            android:name=".chain_of_responsibility.DemoChainStart"
+            android:name=".chainofresponsibility.DemoChainStart"
             android:exported="false" />
         <activity
-            android:name=".chain_of_responsibility.DemoChainMain"
+            android:name=".chainofresponsibility.DemoChainMain"
             android:exported="false" />
         <activity
             android:name=".command.DemoCommandStart"
@@ -133,10 +133,10 @@
             android:name=".template.DemoTemplateMain"
             android:exported="false" />
         <activity
-            android:name=".abstract_factory.DemoAbstractFactoryStart"
+            android:name=".abstractfactory.DemoAbstractFactoryStart"
             android:exported="false" />
         <activity
-            android:name=".abstract_factory.DemoAbstractFactoryMain"
+            android:name=".abstractfactory.DemoAbstractFactoryMain"
             android:exported="false" />
         <activity
             android:name=".factory.DemoFactoryStart"
