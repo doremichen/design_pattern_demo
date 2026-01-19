@@ -10,4 +10,14 @@ public class NoDiscountStrategy implements IDiscountStrategy {
     public double applyDiscount(double price) {
         return price;
     }
+
+    @Override
+    public String getBadgeText() {
+        return ""; // no display
+    }
+
+    @Override
+    public String getBadgeColor() {
+        return "#9E9E9E";
+    }
 }

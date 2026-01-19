@@ -10,4 +10,14 @@ public class ClearanceDiscountStrategy implements IDiscountStrategy {
     public double applyDiscount(double price) {
         return price * 0.5;
     }
+
+    @Override
+    public String getBadgeText() {
+        return "-50%";
+    }
+
+    @Override
+    public String getBadgeColor() {
+        return "#E53935"; // red
+    }
 }

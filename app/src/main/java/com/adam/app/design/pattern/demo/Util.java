@@ -114,7 +114,8 @@ public final class Util {
 
     public enum NavigateEvent {
         NONE,
-        BACK_TO_MENU;
+        BACK_TO_MENU,
+        SHOW_TOAST;
     }
 
     public static class Event<T> {

@@ -166,15 +166,22 @@
         "Strategy lets the algorithm vary independently from clients that use it.\n\n"
         "In this demo, you can choose different discount strategies for a given price:\n"
         "• No Discount\n"
-        "• Seasonal Discount (10%)\n"
-        "• Clearance Discount (50%)\n\n"
+        "• Seasonal Discount (10%%)\n"
+        "• Clearance Discount (50%%)\n\n"
         "Enter a price, select a strategy, and press \"Calculate\" to see the final price."
     </string>
     <string name="demo_strategy_hint_enter_price">Enter price</string>
-    <string name="label_no_discount">No Discount</string>
-    <string name="label_seasonal_discount">Seasonal (10%)</string>
-    <string name="label_clearance_discount">Clearance (50%)</string>
+    <string name="demo_strategy_label_no_discount">No Discount</string>
+    <string name="demo_strategy_label_seasonal_discount">Seasonal (10%)</string>
+    <string name="demo_strategy_label_clearance_discount">Clearance (50%)</string>
     <string name="demo_strategy_btn_calculate">Calculate</string>
+    <string name="demo_strategy_checkout_strategy">Checkout Strategy</string>
+    <string name="demo_strategy_original_price_input">Original Price ($)</string>
+    <string name="demo_strategy_select_discount_strategy">Select Discount Strategy</string>
+    <string name="demo_strategy_payment_summary">PAYMENT SUMMARY</string>
+    <string name="demo_strategy_subtotal">Subtotal</string>
+    <string name="demo_strategy_total_amount">Total Amount</string>
+    <string name="demo_strategy_toast_error_occurred">Strategy Error!!!</string>
     <string name="demo_adapter_instruction">
         "Adapter Pattern allows incompatible interfaces to work together.\n"
         "    In this example, we have a legacy player that only supports MP3.\n"
@@ -389,9 +396,9 @@
         <item>JSON</item>
     </string-array>
     <string-array name="strategy_types">
-        <item>@string/label_no_discount</item>
-        <item>@string/label_seasonal_discount</item>
-        <item>@string/label_clearance_discount</item>
+        <item>@string/demo_strategy_label_no_discount</item>
+        <item>@string/demo_strategy_label_seasonal_discount</item>
+        <item>@string/demo_strategy_label_clearance_discount</item>
     </string-array>
     <string-array name="media_formats">
         <item>mp3</item>

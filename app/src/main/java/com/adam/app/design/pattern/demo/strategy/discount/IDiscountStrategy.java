@@ -8,4 +8,6 @@ package com.adam.app.design.pattern.demo.strategy.discount;
 
 public interface IDiscountStrategy {
     double applyDiscount(double price);
+    String getBadgeText(); // get badge text
+    String getBadgeColor(); // get badge color
 }

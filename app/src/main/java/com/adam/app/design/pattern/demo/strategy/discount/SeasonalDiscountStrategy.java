@@ -10,4 +10,14 @@ public class SeasonalDiscountStrategy implements IDiscountStrategy {
     public double applyDiscount(double price) {
         return price * 0.9;
     }
+
+    @Override
+    public String getBadgeText() {
+        return "-10%";
+    }
+
+    @Override
+    public String getBadgeColor() {
+        return "#FB8C00";  // Orange
+    }
 }

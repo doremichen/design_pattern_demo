@@ -9,6 +9,7 @@ package com.adam.app.design.pattern.demo;
 
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -63,6 +64,18 @@ public class BindingUtils {
         // set text color
         text.setTextColor(ContextCompat.getColor(text.getContext(), colorRes));
 
+    }
+
+    @BindingAdapter("cardBackgroundColor")
+    public static void setCardBackgroundColor(MaterialCardView view, String colorString) {
+        if (colorString != null && !colorString.isEmpty()) {
+            try {
+                view.setCardBackgroundColor(Color.parseColor(colorString));
+            } catch (Exception e) {
+                // default
+                view.setCardBackgroundColor(Color.LTGRAY);
+            }
+        }
     }
 
 }

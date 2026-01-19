@@ -167,22 +167,27 @@
 <string name="demo_decorator_coffee_info_result">咖啡資訊：%1$s\n總金額：$%2$.2f</string>
 <string name="demo_decorator_receipt">收據</string>
 <string name="demo_decorator_total_amount">總金額</string>
-
 <string name="strategy_description">
     策略模式（Strategy Pattern）讓你可以定義一系列的演算法，將它們封裝起來並使它們可以互相替換。\n
     策略模式允許演算法獨立於使用它的客戶端變化。\n\n
     在本範例中，你可以為輸入的價格選擇不同的折扣策略：\n
     • 無折扣\n
-    • 季節性折扣（10%）\n
-    • 清倉折扣（50%）\n\n
+    • 季節性折扣（10%%）\n
+    • 清倉折扣（50%%）\n\n
     輸入價格，選擇一個策略，然後按下「計算」來查看最終價格。
 </string>
 <string name="demo_strategy_hint_enter_price">請輸入價格</string>
-<string name="label_no_discount">無折扣</string>
-<string name="label_seasonal_discount">季節性折扣（10%）</string>
-<string name="label_clearance_discount">清倉折扣（50%）</string>
+<string name="demo_strategy_label_no_discount">無折扣</string>
+<string name="demo_strategy_label_seasonal_discount">季節性折扣（10%）</string>
+<string name="demo_strategy_label_clearance_discount">清倉折扣（50%）</string>
 <string name="demo_strategy_btn_calculate">計算</string>
-
+<string name="demo_strategy_checkout_strategy">結帳策略</string>
+<string name="demo_strategy_original_price_input">原價（美元）</string>
+<string name="demo_strategy_select_discount_strategy">選擇折扣策略</string>
+<string name="demo_strategy_payment_summary">付款匯總</string>
+<string name="demo_strategy_subtotal">小計</string>
+<string name="demo_strategy_total_amount">總金額</string>
+    <string name="demo_strategy_toast_error_occurred">策略錯誤!!!</string>
 <string name="demo_adapter_instruction">
     轉接器模式（Adapter Pattern）允許不相容的介面能夠一起工作。\n
     在此範例中，我們有一個僅支援 MP3 的舊式播放器。\n
@@ -386,9 +391,9 @@
     <item>JSON</item>
 </string-array>
 <string-array name="strategy_types">
-    <item>@string/label_no_discount</item>
-    <item>@string/label_seasonal_discount</item>
-    <item>@string/label_clearance_discount</item>
+    <item>@string/demo_strategy_label_no_discount</item>
+    <item>@string/demo_strategy_label_seasonal_discount</item>
+    <item>@string/demo_strategy_label_clearance_discount</item>
 </string-array>
 <string-array name="media_formats">
     <item>mp3</item>
