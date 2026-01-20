@@ -44,31 +44,20 @@ public class DemoBridgeStart extends AppCompatActivity {
         mBinding = ActivityDemoBridgeStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
-        // build spinner adapter
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.bridge_devices, R.layout.spinner_item_black);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // set adapter to spinner
-        mBinding.spinnerDevice.setAdapter(adapter);
+        String[] devices = getResources().getStringArray(R.array.bridge_devices);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, devices);
+        mBinding.autoCompleteDevice.setAdapter(adapter);
 
+        // set the first item
+        mBinding.autoCompleteDevice.setText(adapter.getItem(0), false);
 
-        // set spinner item selected listener
-        mBinding.spinnerDevice.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String deviceName = parent.getItemAtPosition(position).toString();
-                mRemoteControl = new RemoteControl(mDeviceMap.get(deviceName));
-
-                updateStatus();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
 
         // set toggle power button click listener
         mBinding.btnTogglePower.setOnClickListener(v -> {
+            // current device
+            String device = mBinding.autoCompleteDevice.getText().toString();
+            mRemoteControl = new RemoteControl(mDeviceMap.get(device));
+
             // toggle power
             mRemoteControl.togglePower();
             // update status

@@ -1,5 +1,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <import type="android.view.View" />
@@ -11,23 +12,40 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F0F2F5"
-        android:fitsSystemWindows="true">
+        android:padding="24dp"
+        android:fitsSystemWindows="true"
+        tools:context=".chainofresponsibility.DemoChainStart">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_demo_chain_of_responsibility"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/txt_title">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@drawable/shape_gradient_card_bg"
+                android:background="@color/grey_background"
                 android:padding="16dp">
 
                 <TextView
@@ -35,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/demo_chain_support_ticket_system_title"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:layout_marginBottom="12dp"/>
 
@@ -43,14 +61,25 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:hint="@string/demo_chain_input_request_hint"
-                    android:textColorHint="@color/dark_grey_bg"
-                    app:boxBackgroundColor="@color/amber_500">
+                    app:boxStrokeColor="@color/purple_500"
+                    app:hintTextColor="@color/purple_700"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusBottomEnd="8dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@={vm.mRequestInput}" />
+                        android:text="@={vm.mRequestInput}"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:inputType="textMultiLine"
+                        android:gravity="top"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton

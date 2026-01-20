@@ -35,11 +35,12 @@ public class DemoFlyweightStart extends AppCompatActivity {
         mBinding = ActivityDemoFlyweightStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
-        // build spinner adapter
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.piece_colors, R.layout.spinner_item_black);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // set adapter to spinner
-        mBinding.spinnerColor.setAdapter(adapter);
+        // build adapter
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.piece_colors, android.R.layout.simple_dropdown_item_1line);
+        // set adapter to auto complete text view
+        mBinding.autoCompleteColor.setAdapter(adapter);
+        // set the first item selected
+        mBinding.autoCompleteColor.setText(adapter.getItem(0), false);
 
 
         mChessBoardView = mBinding.chessBoard;
@@ -47,7 +48,7 @@ public class DemoFlyweightStart extends AppCompatActivity {
         // set place piece button click listener
         mBinding.btnPlacePiece.setOnClickListener(v -> {
             // get color from spinner
-            String color = mBinding.spinnerColor.getSelectedItem().toString();
+            String color = mBinding.autoCompleteColor.getText().toString();
             // get chess by chess piece factory
             IChessPiece chess = ChessPieceFactory.getChessPiece(this , color);
             // set x and y of chess

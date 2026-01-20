@@ -116,6 +116,10 @@ public final class Util {
         NONE,
         BACK_TO_MENU,
         SHOW_TOAST;
+
+        public String onInfo() {
+            return "Default";
+        }
     }
 
     public static class Event<T> {

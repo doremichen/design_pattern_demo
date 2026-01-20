@@ -10,17 +10,18 @@
     android:fitsSystemWindows="true"
     tools:context=".builder.DemoBuilderStart">
 
-    <!-- 標題 -->
+    <!-- Title -->
     <TextView
         android:id="@+id/txt_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:text="@string/title_demo_builder"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
+        android:textColor="?android:attr/textColorPrimary"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +32,7 @@
         android:id="@+id/checkbox_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/grey_background"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -44,31 +46,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cb_demo_builder_add_cpu"
-            android:textColor="@color/black"/>
+            android:textColor="@android:color/black"/>
 
         <CheckBox
             android:id="@+id/checkbox_ram"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cb_demo_builder_add_ram"
-            android:textColor="@color/black"/>
+            android:textColor="@android:color/black"/>
 
         <CheckBox
             android:id="@+id/checkbox_storage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cb_demo_builder_add_storage"
-            android:textColor="@color/black"/>
+            android:textColor="@android:color/black"/>
 
         <CheckBox
             android:id="@+id/checkbox_gpu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cb_demo_builder_add_gpu"
-            android:textColor="@color/black"/>
+            android:textColor="@android:color/black"/>
     </LinearLayout>
 
-    <!-- 建立按鈕 -->
+    <!-- Create Computer Button -->
     <Button
         android:id="@+id/btn_create_computer"
         android:layout_width="0dp"
@@ -81,7 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- 結果 TextView -->
+    <!-- Result TextView -->
     <TextView
         android:id="@+id/txt_result"
         android:layout_width="0dp"
@@ -101,7 +103,7 @@
         android:background="@android:color/darker_gray"
         android:textAlignment="center"/>
 
-    <!-- 返回主選單 -->
+    <!-- Back to Main Button -->
     <Button
         android:id="@+id/btn_back_to_main"
         android:layout_width="0dp"

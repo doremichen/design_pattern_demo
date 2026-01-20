@@ -211,6 +211,9 @@
 </string>
 <string name="demo_iterator_btn_show_items">顯示項目</string>
 <string name="demo_iterator_tv_items_will_be_listed_here">項目將在此顯示…</string>
+<string name="demo_iterator_current_item">目前項目</string>
+<string name="demo_iterator_next">下一項</string>
+<string name="demo_iterator_iterator_flow">迭代路徑</string>
 
 <string name="demo_composite_instruction">
     組合模式（Composite Pattern）允許客戶端將單一物件與物件的組合以一致的方式處理。\n\n
@@ -243,6 +246,8 @@
 <string name="demo_observer_tv_observer_1">觀察者一：-- %1$s</string>
 <string name="demo_observer_tv_observer_2">觀察者二：-- %1$s</string>
 <string name="toast_error_empty_temperature">溫度不得為空！請輸入有效數值！</string>
+<string name="demo_observer_subject_controller">控制器 (Subject)</string>
+<string name="demo_observer_observers">觀察者狀態 (Observers)</string>
 
 <string name="demo_facade_instruction">
     外觀模式（Facade Pattern）提供一個簡化的介面，以操作複雜的子系統。\n\n
@@ -258,6 +263,7 @@
 <string name="demo_facade_et_hint_enter_song_name">輸入歌曲名稱</string>
 <string name="demo_facade_btn_play_song">播放歌曲</string>
 <string name="demo_facade_tv_log">日誌:</string>
+<string name="demo_facade_system_internal_operations_facade_log">外觀日誌</string>
 <string name="demo_memento_instruction">
     "備忘錄模式允許在不違反封裝的情況下，儲存和還原物件的內部狀態。\n"
     "\n"
@@ -274,6 +280,7 @@
 <string name="demo_memento_state_log_save_success">狀態已儲存: %1$s</string>
 <string name="demo_memento_state_log_undo_success">狀態已還原: %1$s</string>
 <string name="demo_memento_state_log_undo_fail">無儲存狀態</string>
+    <string name="demo_memento_caretaker_log">管理員日誌</string>
 <string name="demo_vistor_instruction">
     "訪客模式允許您在不修改現有物件結構的情況下，為其新增操作。\n"
     "\n"
@@ -293,6 +300,10 @@
 <string name="demo_visitor_x">" x "</string>
 <string name="demo_visitor_draw_visitor">繪圖訪客</string>
 <string name="demo_visitor_area_visitor">面積訪客</string>
+<string name="demo_visitor_select_type">選擇訪問者類型</string>
+<string name="demo_visitor_show_no_select_msg">請先選擇一個訪問者類型</string>
+<string name="demo_visitor_visit_report">訪問報告</string>
+<string name="demo_visitor_result">等待訪問者執行...</string>
 <string name="demo_state_instruction">
     "狀態模式允許物件在內部狀態改變時改變其行為。\n"
     "它看起來像是物件改變了其類別。\n"
@@ -344,6 +355,7 @@
 <string name="demo_interpreter_tv_result_will_appear_here">結果將顯示在此處</string>
 <string name="demo_interpreter_error_invalid_expression">錯誤：無效表達式。</string>
 <string name="demo_interpreter_simple_calculate">簡單計算：(+/-)</string>
+<string name="demo_interpreter_result">解釋器結果</string>
 <string name="demo_flyweight_instruction">
     "享元模式是一種結構型設計模式，它允許共享物件狀態的共同部分以減少記憶體使用。\n\n\n"
     "在此範例中，我們模擬在棋盤上繪製棋子（黑色或白色）。我們不為每次繪製都建立一個新物件，而是使用工廠來重用黑色和白色棋子的共享實例。\n\n\n"
@@ -372,12 +384,16 @@
 <string name="demo_bridge_btn_toggle_power">切換電源</string>
 <string name="demo_bridge_btn_volume_plus">音量 +</string>
 <string name="demo_bridge_btn_volume_minus">音量 -</string>
+<string name="demo_bridge_select_device">選擇受控裝置</string>
+<string name="demo_bridge_device_implementation">目前裝置狀態)</string>
+<string name="demo_bridge_device_status">等待裝置連接...</string>
 <string name="demo_factory_type_hero">英雄</string>
 <string name="demo_factory_type_mage">法師</string>
 <string name="demo_factory_type_archer">弓箭手</string>
 <string name="demo_flyweight_color_black">黑色</string>
 <string name="demo_flyweight_color_white">白色</string>
-    <string-array name="character_types">
+<string name="demo_flyweight_select_color">選擇棋子顏色</string>
+<string-array name="character_types">
     <item>@string/demo_factory_type_hero</item>
     <item>@string/demo_factory_type_mage</item>
     <item>@string/demo_factory_type_archer</item>

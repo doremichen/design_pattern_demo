@@ -41,6 +41,10 @@ public class ItemCollection {
             Util.log("next: " + items.get(index));
             return items.get(index++);
         }
+
+        public int getIndex() {
+            return index;
+        }
     }
 
 }

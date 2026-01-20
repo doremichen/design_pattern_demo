@@ -21,7 +21,8 @@ public class InterpreterUtil {
      */
     public static IExpression parse(String expr) {
         // split the expression into tokens
-        String[] tokens = expr.trim().split(" ");
+        expr = expr.replaceAll("([+\\-*/()])", " $1 ");
+        String[] tokens = expr.trim().split("\\s+");
         IExpression result = new NumberExpression(Integer.parseInt(tokens[0]));
 
         for (int i = 1; i < tokens.length; i += 2) {
@@ -59,6 +60,7 @@ public class InterpreterUtil {
         Stack<String> operators = new Stack<>();
 
         // Tokenize expression
+        expr = expr.replaceAll("([+\\-*/()])", " $1 ");
         String[] tokens = expr.trim().split("\\s+");
         for (String token : tokens) {
             if (isNumber(token)) {

@@ -9,12 +9,14 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.adam.app.design.pattern.demo.MainActivity;
 import com.adam.app.design.pattern.demo.Util;
 import com.adam.app.design.pattern.demo.databinding.ActivityDemoIteratorStartBinding;
 import com.adam.app.design.pattern.demo.iterator.data_set.IItemIterator;
 import com.adam.app.design.pattern.demo.iterator.data_set.ItemCollection;
+import com.adam.app.design.pattern.demo.iterator.viewmodel.IteratorViewModel;
 
 public class DemoIteratorStart extends AppCompatActivity {
 
@@ -28,35 +30,26 @@ public class DemoIteratorStart extends AppCompatActivity {
         // view binding
         mBinding = ActivityDemoIteratorStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
+        // init view model
+        IteratorViewModel viewModel = new ViewModelProvider(this).get(IteratorViewModel.class);
+        // data binding to vew model
+        mBinding.setVm(viewModel);
+        // set lifecycle owner
+        mBinding.setLifecycleOwner(this);
 
-        // set show items button click listener
-        mBinding.btnShowItems.setOnClickListener(v -> {
-            //show items
-            showItms();
-        });
+        // observer
+        viewModel.getNavigateEvent().observe(this, this::onNavigate);
 
-        // set back to main button click listener
-        mBinding.btnBackToMain.setOnClickListener(v -> {
-            // back to main
-            Intent intent = new Intent(this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-            startActivity(intent);
-        });
         
     }
 
-    private void showItms() {
-        // ItemCollection instance
-        ItemCollection itemCollection = new ItemCollection();
-        // ItemIterator instance
-        IItemIterator itemIterator = itemCollection.createIterator();
-        // show items
-        while (itemIterator.hasNext()) {
-            String item = itemIterator.next();
+    private void onNavigate(Util.Event<Util.NavigateEvent> event) {
+        Util.NavigateEvent navigateEvent = event.getContentIfNotHandled();
+        if (navigateEvent != null) {
+            if (navigateEvent == Util.NavigateEvent.BACK_TO_MENU) {
+                Util.backToMainActivity(this);
+            }
         }
-        // show result
-        mBinding.txtResult.setText(Util.logMessage());
-        // clear log
-        Util.clearLog();
     }
+
 }
