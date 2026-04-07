@@ -27,7 +27,7 @@ public class DemoAdapterStart extends AppCompatActivity {
 
         // set media type spinner
         // build spinner adapter
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.media_formats, R.layout.spinner_item_black);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.media_formats, R.layout.spinner_item_layout);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // set adapter to spinner
         mBinding.spinnerFormat.setAdapter(adapter);

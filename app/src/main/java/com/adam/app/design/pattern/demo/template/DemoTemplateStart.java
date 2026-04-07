@@ -4,11 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.adam.app.design.pattern.demo.MainActivity;
 import com.adam.app.design.pattern.demo.R;
@@ -29,7 +25,7 @@ public class DemoTemplateStart extends AppCompatActivity {
         mBinding = ActivityDemoTemplateStartBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
         // build spinner adapter
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.exporter_types, R.layout.spinner_item_black);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.exporter_types, R.layout.spinner_item_layout);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // set adapter to spinner
         mBinding.spinnerExporter.setAdapter(adapter);

@@ -46,7 +46,7 @@ public class DemoFactoryStart extends AppCompatActivity {
         setContentView(mBinding.getRoot());
 
         // build spinner adapter
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.character_types, R.layout.spinner_item_black);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.character_types, R.layout.spinner_item_layout);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // set adapter to spinner
         mBinding.spinnerType.setAdapter(adapter);
