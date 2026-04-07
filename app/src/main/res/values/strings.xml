@@ -402,6 +402,7 @@
     <string name="demo_factory_select_character_type_title">Select Character Type:</string>
     <string name="demo_abstract_factory_select_factory_theme_family_title">Select Factory Theme (Family):</string>
     <string name="demo_template_select_export_format_template_title">Select Export Format (Template):</string>
+    <string name="demo_build_select_components_to_build">Select Components to Build:</string>
     <string-array name="character_types">
         <item>@string/demo_factory_type_hero</item>
         <item>@string/demo_factory_type_mage</item>

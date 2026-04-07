@@ -397,6 +397,7 @@
 <string name="demo_factory_select_character_type_title">選擇角色類型：</string>
 <string name="demo_abstract_factory_select_factory_theme_family_title"><![CDATA[選擇工廠主題（系列）：]]></string>
 <string name="demo_template_select_export_format_template_title"><![CDATA[選擇匯出格式（範本）：]]></string>
+<string name="demo_build_select_components_to_build">選擇要建置的元件：</string>
 <string-array name="character_types">
     <item>@string/demo_factory_type_hero</item>
     <item>@string/demo_factory_type_mage</item>

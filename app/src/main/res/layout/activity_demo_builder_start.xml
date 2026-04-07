@@ -6,114 +6,149 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
+    android:background="?android:attr/windowBackground"
     android:fitsSystemWindows="true"
     tools:context=".builder.DemoBuilderStart">
 
-    <!-- Title -->
     <TextView
         android:id="@+id/txt_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/title_demo_builder"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="?android:attr/textColorPrimary"
+        android:layout_marginTop="24dp"
         android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/title_demo_builder"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Checkbox -->
-    <LinearLayout
-        android:id="@+id/checkbox_container"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/grey_background"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/txt_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <CheckBox
-            android:id="@+id/checkbox_cpu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cb_demo_builder_add_cpu"
-            android:textColor="@android:color/black"/>
-
-        <CheckBox
-            android:id="@+id/checkbox_ram"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cb_demo_builder_add_ram"
-            android:textColor="@android:color/black"/>
-
-        <CheckBox
-            android:id="@+id/checkbox_storage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cb_demo_builder_add_storage"
-            android:textColor="@android:color/black"/>
-
-        <CheckBox
-            android:id="@+id/checkbox_gpu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cb_demo_builder_add_gpu"
-            android:textColor="@android:color/black"/>
-    </LinearLayout>
-
-    <!-- Create Computer Button -->
-    <Button
-        android:id="@+id/btn_create_computer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/btn_builder_create_computer"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_container"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Result TextView -->
     <TextView
-        android:id="@+id/txt_result"
+        android:id="@+id/label_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/demo_build_select_components_to_build"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_config"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:strokeColor="?attr/colorOnSurface"
+        app:strokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_config">
+
+        <LinearLayout
+            android:id="@+id/checkbox_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <CheckBox
+                android:id="@+id/checkbox_cpu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cb_demo_builder_add_cpu"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <CheckBox
+                android:id="@+id/checkbox_ram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cb_demo_builder_add_ram"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <CheckBox
+                android:id="@+id/checkbox_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cb_demo_builder_add_storage"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <CheckBox
+                android:id="@+id/checkbox_gpu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cb_demo_builder_add_gpu"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="?android:attr/textColorPrimary" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_create_computer"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_builder_create_computer"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_config" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_result"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:padding="10dp"
-        android:lineSpacingExtra="4dp"
-        android:text="@string/demo_builder_result_init_info"
-        app:layout_constraintTop_toBottomOf="@id/btn_create_computer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="24dp"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="?attr/colorOnSurface"
+        app:strokeWidth="1dp"
         app:layout_constraintBottom_toTopOf="@id/btn_back_to_main"
-        android:background="@android:color/darker_gray"
-        android:textAlignment="center"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_create_computer">
 
-    <!-- Back to Main Button -->
-    <Button
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txt_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="start"
+                android:lineSpacingMultiplier="1.4"
+                android:text="@string/demo_builder_result_init_info"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="?attr/colorOnSurface" />
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_back_to_main"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/btn_back_to_main_list"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
