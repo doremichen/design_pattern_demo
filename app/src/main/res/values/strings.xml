@@ -3,6 +3,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Settings</string>
     <!-- title string-->
+    <string name="title_demo_pattern_description">Pattern Description</string>
     <string name="title_demo_test">Hello world</string>
     <string name="title_demo_singleton">Demo singleton pattern</string>
     <string name="title_demo_factory">Demo factory pattern</string>

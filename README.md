@@ -70,3 +70,6 @@ The app demonstrates the following 23 design patterns categorized into 3 groups:
 4. Run on an emulator or real device (SDK 30+ required).
 
 Feel free to fork this project and contribute improvements or additional pattern demos!
+
+## License
+This project is licensed under the **MIT License**.

@@ -4,6 +4,7 @@
 <string name="action_settings">設定</string>
 
 <!-- title string -->
+<string name="title_demo_pattern_description">模式描述</string>
 <string name="title_demo_test">哈囉世界</string>
 <string name="title_demo_singleton">單例模式示範</string>
 <string name="title_demo_factory">工廠模式示範</string>
@@ -393,7 +394,7 @@
 <string name="demo_flyweight_color_black">黑色</string>
 <string name="demo_flyweight_color_white">白色</string>
 <string name="demo_flyweight_select_color">選擇棋子顏色</string>
-<string-array name="character_types">
+    <string-array name="character_types">
     <item>@string/demo_factory_type_hero</item>
     <item>@string/demo_factory_type_mage</item>
     <item>@string/demo_factory_type_archer</item>

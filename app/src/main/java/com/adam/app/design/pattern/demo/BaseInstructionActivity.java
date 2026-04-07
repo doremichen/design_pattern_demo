@@ -17,7 +17,6 @@ public abstract class BaseInstructionActivity extends AppCompatActivity {
     private ActivityBaseInstructionBinding mBinding;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +28,7 @@ public abstract class BaseInstructionActivity extends AppCompatActivity {
     }
 
     public abstract String getInstruction();
+
     public abstract void startDemo();
 
 }

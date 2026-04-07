@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.DesignPatternDemo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.DesignPatternDemo" parent="Theme.Material3.DayNight.NoActionBar">
 
         <!-- Primary -->
         <item name="colorPrimary">@color/purple_200</item>
