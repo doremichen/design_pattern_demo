@@ -399,6 +399,8 @@
 <string name="demo_template_select_export_format_template_title"><![CDATA[選擇匯出格式（範本）：]]></string>
 <string name="demo_build_select_components_to_build">選擇要建置的元件：</string>
 <string name="demo_state_current_state_title">目前狀態</string>
+<string name="demo_flyweight_total_pieces_count">總件數: %1$s</string>
+<string name="demo_flyweight_unique_objects_count">單一物件: %1$s</string>
 <string-array name="character_types">
     <item>@string/demo_factory_type_hero</item>
     <item>@string/demo_factory_type_mage</item>

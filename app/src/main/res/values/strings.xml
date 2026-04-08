@@ -404,6 +404,8 @@
     <string name="demo_template_select_export_format_template_title">Select Export Format (Template):</string>
     <string name="demo_build_select_components_to_build">Select Components to Build:</string>
     <string name="demo_state_current_state_title">CURRENT STATE</string>
+    <string name="demo_flyweight_total_pieces_count">Total Pieces: %1$s</string>
+    <string name="demo_flyweight_unique_objects_count">Unique Objects: %1$s</string>
     <string-array name="character_types">
         <item>@string/demo_factory_type_hero</item>
         <item>@string/demo_factory_type_mage</item>
