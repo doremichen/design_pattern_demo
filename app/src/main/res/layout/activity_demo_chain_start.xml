@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="24dp"
+        android:background="?android:attr/windowBackground"
         android:fitsSystemWindows="true"
         tools:context=".chainofresponsibility.DemoChainStart">
 
@@ -20,76 +20,81 @@
             android:id="@+id/txt_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:gravity="center"
             android:text="@string/title_demo_chain_of_responsibility"
+            android:textAppearance="?attr/textAppearanceHeadline5"
             android:textColor="?android:attr/textColorPrimary"
-            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="10dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_input"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            app:layout_constraintTop_toBottomOf="@id/txt_title">
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="?attr/colorOnSurface"
+            app:strokeWidth="1dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/grey_background"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <TextView
+                    android:id="@+id/txt_ticket_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/demo_chain_support_ticket_system_title"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textColor="?android:attr/textColorPrimary"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-                    android:layout_marginBottom="12dp"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:hint="@string/demo_chain_input_request_hint"
-                    app:boxStrokeColor="@color/purple_500"
-                    app:hintTextColor="@color/purple_700"
-                    app:boxCornerRadiusTopStart="8dp"
-                    app:boxCornerRadiusTopEnd="8dp"
-                    app:boxCornerRadiusBottomStart="8dp"
-                    app:boxCornerRadiusBottomEnd="8dp">
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/txt_ticket_title">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@={vm.mRequestInput}"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp"
-                        android:paddingTop="16dp"
-                        android:paddingBottom="16dp"
+                        android:gravity="top"
                         android:inputType="textMultiLine"
-                        android:gravity="top"/>
+                        android:minLines="2"
+                        android:text="@={vm.mRequestInput}"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textColor="?android:attr/textColorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_send"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:layout_marginTop="16dp"
+                    android:onClick="@{(v) -> vm.onSendRequest(v.context)}"
                     android:text="@string/demo_chain_btn_send_request"
-                    app:cornerRadius="8dp"
-                    android:onClick="@{(v) -> vm.onSendRequest(v.context)}"/>
-            </LinearLayout>
+                    app:cornerRadius="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/input_layout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
@@ -99,57 +104,75 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:text="@string/demo_chain_processing_status"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="?android:attr/textColorSecondary"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/card_input"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_input" />
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
+            android:id="@+id/card_result"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="16dp"
-            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
             app:strokeWidth="2dp"
             app:handlerStrokeColor='@{vm.handlerLevel}'
-            app:layout_constraintTop_toBottomOf="@id/lbl_status"
-            app:layout_constraintBottom_toTopOf="@id/btn_back">
+            app:layout_constraintBottom_toTopOf="@id/btn_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbl_status">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/shape_gradient_card_bg"
-                android:gravity="center"
-                android:orientation="vertical"
                 android:padding="24dp">
 
                 <TextView
+                    android:id="@+id/txt_handler_tag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
+                    android:background="?attr/colorPrimaryContainer"
+                    android:paddingHorizontal="12dp"
                     android:paddingVertical="4dp"
-                    android:background="@drawable/shape_log_bg"
-                    android:text='@{vm.handlerLevel == 1 ? "Handled by LOW Level" : (vm.handlerLevel == 2 ? "Handled by MID Level" : (vm.handlerLevel == 3 ? "Handled by HIGH Level" : "Waiting for Request"))}'
+                    android:text='@{vm.handlerLevel == 1 ? "LOW LEVEL" : (vm.handlerLevel == 2 ? "MID LEVEL" : (vm.handlerLevel == 3 ? "HIGH LEVEL" : "IDLE"))}'
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textColor="?attr/colorOnPrimaryContainer"
                     android:textStyle="bold"
-                    app:textColor='@{vm.handlerLevel}'/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/txt_result_msg"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:text="@{vm.resultMessage}"
-                    android:textSize="20sp"
-                    android:textColor="#263238" />
-            </LinearLayout>
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:lineSpacingMultiplier="1.2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_handler_tag"
+                    tools:text="Request will be handled by our support team." />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_back"
-            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/btn_back_to_main_list"
+            android:layout_marginBottom="16dp"
             android:onClick="@{() -> vm.onBackMainClicked()}"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:text="@string/btn_back_to_main_list"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
