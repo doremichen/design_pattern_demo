@@ -328,7 +328,7 @@
     <string name="demo_state_resuming_playback">Resuming playback...</string>
     <string name="demo_state_already_paused">Already paused.</string>
     <string name="demo_state_stopping_from_pause">Stopping from pause...</string>
-    <string name="demo_state_tv_current_state">Current State: %1$s</string>
+    <string name="demo_state_tv_current_state">%1$s</string>
     <string name="demo_state_btn_play">Play</string>
     <string name="demo_state_btn_pause">Pause</string>
     <string name="demo_state_btn_stop">Stop</string>
@@ -403,6 +403,7 @@
     <string name="demo_abstract_factory_select_factory_theme_family_title">Select Factory Theme (Family):</string>
     <string name="demo_template_select_export_format_template_title">Select Export Format (Template):</string>
     <string name="demo_build_select_components_to_build">Select Components to Build:</string>
+    <string name="demo_state_current_state_title">CURRENT STATE</string>
     <string-array name="character_types">
         <item>@string/demo_factory_type_hero</item>
         <item>@string/demo_factory_type_mage</item>

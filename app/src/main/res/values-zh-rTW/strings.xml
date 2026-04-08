@@ -325,7 +325,7 @@
 <string name="demo_state_resuming_playback">正在恢復播放...</string>
 <string name="demo_state_already_paused">已暫停。</string>
 <string name="demo_state_stopping_from_pause">從暫停中停止...</string>
-<string name="demo_state_tv_current_state">目前狀態: %1$s</string>
+<string name="demo_state_tv_current_state">%1$s</string>
 <string name="demo_state_btn_play">播放</string>
 <string name="demo_state_btn_pause">暫停</string>
 <string name="demo_state_btn_stop">停止</string>
@@ -398,6 +398,7 @@
 <string name="demo_abstract_factory_select_factory_theme_family_title"><![CDATA[選擇工廠主題（系列）：]]></string>
 <string name="demo_template_select_export_format_template_title"><![CDATA[選擇匯出格式（範本）：]]></string>
 <string name="demo_build_select_components_to_build">選擇要建置的元件：</string>
+<string name="demo_state_current_state_title">目前狀態</string>
 <string-array name="character_types">
     <item>@string/demo_factory_type_hero</item>
     <item>@string/demo_factory_type_mage</item>
